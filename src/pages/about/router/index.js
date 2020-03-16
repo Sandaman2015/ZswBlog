@@ -11,25 +11,5 @@ export default new Router({
       name: 'about-content',
       component: Content
     }
-    // ,{
-    //   path: '/tags-site',
-    //   name: 'tags-site',
-    //   component: Tags
-    // },
-    // {
-    //   path: '/music-site',
-    //   name: 'music-site',
-    //   component: Music
-    // },
-    // {
-    //   path: '/contact-site',
-    //   name: 'contact-site',
-    //   component: Contact
-    // },
-    // {
-    //   path: '/me-site',
-    //   name: 'me-site',
-    //   component: Me
-    // }
   ]
 })
