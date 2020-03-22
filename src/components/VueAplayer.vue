@@ -4,11 +4,11 @@
     controls
     v-if="flag"
     :music="{
-    title: '冬眠',
-    artist: '司南',
-    src: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=url&id=1398663411',
-    pic: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=pic&id=1398663411',
-    lrc: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=pic&id=1398663411'
+    title: 'Close/Remix 80s',
+    artist: 'TRONICBOX',
+    src: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=lrc&id=536098013',
+    pic: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=lrc&id=536098013',
+    lrc: 'https://api.mlwei.com/music/api/wy/?key=523077333&cache=0&type=lrc&id=536098013'
   }"
     :float="true"
     :list="songList"
@@ -39,9 +39,10 @@ export default {
       //这边是引入了axios然后使用的get请求的一个音乐列表接口
       const getMusicList = url => axios.get(url);
       //这边url随大家更改了
-      let url =
-        "https://api.mlwei.com/music/api/wy/?key=523077333&cache=1&type=songlist&id=585511463";
-      let data = await getMusicList(url);
+      const getMusicSrc = music => axios.get(music);
+      let music = "../../static/data/music.json";
+      let url = await getMusicList(music);
+      let data = await getMusicList(url.musicSrc);
       this.songList = data.Body;
     }
   }

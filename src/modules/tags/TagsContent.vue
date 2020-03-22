@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="cont">
-      <div class="leftContent">
+      <div class="tagItem">
         <article v-for="(item,index) in tagsList" class="wow slideInDown">
           <h3 :class="item.tagClass">
             <i class="fa fa-tag" aria-hidden="true"></i>
@@ -232,17 +232,46 @@ article {
 article:hover {
   cursor: pointer;
   border: #fa6854 solid 1px;
-  margin-top: -10px;
-  margin-bottom: 11px;
   transition: 1s;
 }
-article > h3 {
+.tagItem {
+  width: 60%;
+  float: left;
+  min-height: 660px;
+}
+.tagItem article:first-child h3 {
+  color: #036564;
+}
+.tagItem article:nth-child(8n-7) h3 {
+  color: #beedc7;
+}
+.tagItem article:nth-child(8n-6) h3 {
+  color: #eb6841;
+}
+.tagItem article:nth-child(8n-5) h3 {
+  color: #3fb8af;
+}
+.tagItem article:nth-child(8n-4) h3 {
+  color: #19caad;
+}
+.tagItem article:nth-child(8n-3) h3 {
+  color: #fc9d9a;
+}
+.tagItem article:nth-child(8n-2) h3 {
+  color: #edc951;
+}
+.tagItem article:nth-child(8n-1) h3 {
+  color: #ed4014;
+}
+.tagItem article:nth-child(8n) h3 {
+  color: #2db7f5;
+}
+article h3 {
   width: 35%;
   height: 20px;
   line-height: 20px;
   text-align: right;
   font-size: 1.4em;
-  color: #1d1d1d;
   padding: 10px 0 20px;
 }
 article section {

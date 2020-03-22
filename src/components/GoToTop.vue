@@ -131,10 +131,10 @@ export default {
     goToGithub() {
       this.$notify({
         title: "提醒",
-        message: "即将跳转到码云!希望您能给我点一个star！",
+        message: "即将跳转到博客园!那里也不错哦！",
         type: "success"
       });
-      window.location.href = "https://gitee.com/kidsnosplit/dashboard";
+      window.location.href = "https://www.cnblogs.com/sandaman2019/";
     }
   },
   mounted() {

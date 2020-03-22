@@ -142,12 +142,18 @@
 <script>
 import {
   getArticlesByPage,
-  getArticleByClassPage
+  getArticlesPageByClass
 } from "../../../static/js/api/article.api";
 export default {
   props: {
     articleList: {
       type: Array
+    },
+    isClassType: {
+      type: Boolean
+    },
+    classType: {
+      type: String
     }
   },
   data() {
@@ -173,30 +179,61 @@ export default {
       this.load = true;
       this.pageIndex++;
       var that = this;
-      await getArticlesByPage(this.pageSize, this.pageIndex).then(e => {
-        if (e.length < 3) {
-          for (var i = 0; i < e.length; i++) {
-            this.articleList.push(e[i]);
+      if (!this.isClassType) {
+        await getArticlesByPage(this.pageSize, this.pageIndex).then(e => {
+          if (e.length < 3) {
+            that.loadMoreText = "到底了呦！刷新页面重新看吧！";
+            for (var i = 0; i < e.length; i++) {
+              this.articleList.push(e[i]);
+            }
+            that.disabledBtn = true;
+            that.$message.error(
+              "已经没有文章了哦！去关于本站看看吧！哪里也有好玩的！"
+            );
+          } else if (e.length > 2) {
+            for (var i = 0; i < e.length; i++) {
+              this.articleList.push(e[i]);
+            }
+            that.loadMoreText = "加载更多";
+          } else {
+            that.loadMoreText = "到底了呦！刷新页面重新看吧！";
+            that.disabledBtn = true;
+            that.$message.error(
+              "已经没有文章了哦！去关于本站看看吧！哪里也有好玩的！"
+            );
           }
-          that.$message.error(
-            "已经没有文章了哦！去关于本站看看吧！哪里也有好玩的！"
-          );
-          that.disabledBtn = true;
-          that.loadMoreText = "到底了呦！刷新页面重新看吧！";
-        } else if (e.length > 2) {
-          for (var i = 0; i < e.length; i++) {
-            this.articleList.push(e[i]);
-          }
-          that.loadMoreText = "加载更多";
           that.load = false;
-        } else {
-          that.$message.error(
-            "已经没有文章了哦！去关于本站看看吧！哪里也有好玩的！"
-          );
-          that.disabledBtn = true;
-          that.loadMoreText = "到底了呦！刷新页面重新看吧！";
-        }
-      });
+        });
+      } else {
+        await getArticlesPageByClass(
+          this.pageSize,
+          this.pageIndex,
+          this.classType
+        ).then(e => {
+          if (e.length < 3) {
+            that.loadMoreText = "到底了呦！刷新页面重新看吧！";
+            for (var i = 0; i < e.length; i++) {
+              this.articleList.push(e[i]);
+            }
+            that.disabledBtn = true;
+            that.$message.error(
+              "已经没有这个类型的文章了哦！刷新页面重新浏览吧"
+            );
+          } else if (e.length > 2) {
+            for (var i = 0; i < e.length; i++) {
+              this.articleList.push(e[i]);
+            }
+            that.loadMoreText = "加载更多";
+          } else {
+            that.loadMoreText = "到底了呦！刷新页面重新看吧！";
+            that.disabledBtn = true;
+            that.$message.error(
+              "已经没有这个类型的文章了哦！刷新页面重新浏览吧"
+            );
+          }
+          that.load = false;
+        });
+      }
     },
     jumpToDetails(index) {
       window.location.href = "details.html?ArticleDetails=" + index + "";

@@ -33,7 +33,6 @@
           <i class="fa fa-twitter" aria-hidden="true"></i>
         </a>
       </div>
-      <hr />
       <div class="about">
         <h4>个人信息：</h4>
         <p class="about-me animated bounceInLeft">
@@ -169,7 +168,7 @@ h4 {
 .skill-progress {
   width: 500px;
   height: 300px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 .item {
   margin: 15px 0;

@@ -113,7 +113,7 @@ export default {
         this.$message({
           message: h("p", null, [
             h("span", null),
-            h("i", { style: "color: #67C23A" }, "欢迎登录ZswBlog!")
+            h("i", { style: "color: #67C23A" }, "欢迎登录!")
           ]),
           type: "success"
         });
@@ -124,11 +124,7 @@ export default {
         this.$message({
           message: h("p", null, [
             h("span", null),
-            h(
-              "i",
-              { style: "color: #67C23A" },
-              "来试试登录吧！可以解锁很多姿势哦！"
-            )
+            h("i", { style: "color: #67C23A" }, "来试试登录吧！")
           ])
         });
       }

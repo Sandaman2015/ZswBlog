@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body, button, input, select, textarea {
+  font: 300 1rem/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+      font-size: 1rem;
+}
 ::-webkit-scrollbar-track-piece { 
   /* //滚动条凹槽的颜色，还可以设置边框属性 */
   background-color:#f8f8f8;

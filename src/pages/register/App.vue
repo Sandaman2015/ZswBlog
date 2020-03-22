@@ -46,31 +46,6 @@ export default {
     new WOW().init();
     particlesJS("particles-js", particlesConfig);
   },
-  created() {
-    setTimeout(() => {
-      window.L2Dwidget.init({
-        pluginRootPath: "../../../static/live2dw/",
-        pluginJsPath: "lib/",
-        pluginModelPath: "live2d-widget-model-hijiki/assets/",
-        tagMode: false,
-        debug: false,
-        model: {
-          jsonPath:
-            "../../../static/live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json"
-        },
-        display: { position: "left", width: 280, height: 350 },
-        mobile: { show: true },
-        log: false
-      });
-    }, 1000);
-    this.$message({
-      showClose: true,
-      duration: 0,
-      message:
-        "提示：恶意填写或捣乱以致邮件发送失败的用户将被取消申请友情链接并清除所有留言和评论，所以请珍重！",
-      type: "warning"
-    });
-  },
   methods: {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {

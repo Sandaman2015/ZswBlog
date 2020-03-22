@@ -62,18 +62,6 @@ export default {
           imgSrc:
             "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1989401558,1820116918&fm=26&gp=0.jpg",
           href: ""
-        },
-        {
-          title: "浙江旅行分享",
-          imgSrc:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1989401558,1820116918&fm=26&gp=0.jpg",
-          href: ""
-        },
-        {
-          title: "浙江旅行分享",
-          imgSrc:
-            "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1989401558,1820116918&fm=26&gp=0.jpg",
-          href: ""
         }
       ],
       currentDate: new Date()

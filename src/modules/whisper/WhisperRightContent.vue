@@ -79,11 +79,8 @@ export default {
   },
   data() {
     return {
-      load: false,
-      loadMoreText: "加载更多",
       pageSize: 3,
-      pageIndex: 1,
-      disabledBtn: false
+      pageIndex: 1
     };
   },
   methods: {

@@ -1,14 +1,7 @@
 <template>
   <!-- <div class="wrap" id="wrap"> -->
   <div class="wrapper">
-    <video
-      id="v1"
-      autoplay
-      loop
-      style="width: 100%"
-      :src="videoSrc"
-      poster="../../../static/images/bg_4.jpg"
-    >
+    <video id="v1" autoplay loop style="width: 100%" :src="videoSrc" :poster="poster">
       <!-- <source :src="videoSrc" /> -->
     </video>
     <div class="product_list" id="product_list">
@@ -173,7 +166,8 @@ import axios from "axios";
 export default {
   data() {
     return {
-      videoSrc: ""
+      videoSrc: "",
+      poster: ""
     };
   },
   created() {
@@ -181,17 +175,13 @@ export default {
       .get("../../../static/data/indexVideo.json")
       .then(resolve => {
         this.videoSrc = resolve.videosrc;
+        this.poster = resolve.poster;
       })
       .catch(e => {
         console.log("请求视频失败,请刷新重试！", e);
       });
   }
 };
-// ../../../static/images/bg_1.jpg
-// ../../../static/images/bg_2.jpg
-// ../../../static/images/bg_3.jpg
-// ../../../static/images/bg_4.jpg
-// ../../../static/images/bg_5.jpg
 </script>
 <style scoped>
 video {

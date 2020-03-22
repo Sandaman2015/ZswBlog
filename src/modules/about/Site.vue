@@ -4,7 +4,7 @@
       <div class="main animated zoomIn">
         <img src="../../../static/images/z2.jpg" alt="图标" class="favicon animated rotateIn" />
         <h1>ZswBlog</h1>
-        <h2>一名C#/JAVA不知道如何选择的憨憨！</h2>
+        <h2>一名正在追求理想追求自我的程序员</h2>
       </div>
       <hr />
       <div class="location">
@@ -24,7 +24,7 @@
       <div class="about">
         <h4>关于本站：</h4>
         <p class="about-site">
-          本站为张晟玮博客2.0版本，目前已开源，欢迎大家给我点一个star！
+          本站为张晟玮博客2.0版本，目前已开源至Github和Gitee，欢迎大家给我点一个star！
           <br />后端：
           <span>
             该博客由原先的.Net MVC+EF+SqlServer2008作为后端支持,
@@ -42,7 +42,7 @@
             强行拼凑jquery+vue+layui,而且有的直接复制的js我自己都没看懂！
             这次我利用webpack+node+vuecli的设计使我一下子对前端有了崭新的认识,
             模块化的开发思想很棒，也很符合未来软件设计，其实不止前端，后端也是！
-            运用到的框架：Node,Webpack,VueCli,Element-Ui,还有一些网上百度的组件
+            运用到的框架：Node,Webpack,VueCli,Element-Ui,还有一些网上百度的自认为很漂亮的组件
           </span>
         </p>
         <h4>感谢：</h4>

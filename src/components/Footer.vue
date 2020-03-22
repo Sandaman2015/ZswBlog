@@ -5,7 +5,7 @@
         <div class="copyright">
           <div class="info">
             <div class="contact">
-              <a href="javascript:void(0)" class="github">
+              <a href="https://github.com/Sandaman2015" class="github">
                 <i class="fa fa-github"></i>
               </a>
               <a
@@ -32,7 +32,7 @@
             </p>
             <p class="mt05">
               Powered by .NET Core on Linux
-              <i class="fa fa-linux" aria-hidden="true"></i>
+              <i class="fa fa-linux" aria-hidden="true"></i>&nbsp;
               <a href="http://this.zswblog.xyz">后台管理</a>
             </p>
           </div>
@@ -56,7 +56,7 @@ export default {
 @import "../../static/css/font-awesome.min.css";
 @import "../../static/css/footer.css";
 .footer-wrap {
-  background-color: gainsboro;
+  background-color: white;
 }
 .contact a .fa {
   color: #212220;

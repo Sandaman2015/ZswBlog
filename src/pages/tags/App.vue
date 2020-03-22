@@ -20,24 +20,6 @@ export default {
   },
   data() {
     return {};
-  },
-  created() {
-    setTimeout(() => {
-      window.L2Dwidget.init({
-        pluginRootPath: "../../../static/live2dw/",
-        pluginJsPath: "lib/",
-        pluginModelPath: "live2d-widget-model-hijiki/assets/",
-        tagMode: false,
-        debug: false,
-        model: {
-          jsonPath:
-            "../../../static/live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json"
-        },
-        display: { position: "left", width: 280, height: 350 },
-        mobile: { show: true },
-        log: false
-      });
-    }, 1000);
   }
 };
 </script>

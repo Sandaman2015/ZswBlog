@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="warp">
-      <v-left :articleList="articleList" />
+      <v-left :articleList="articleList" :isClassType="isClassType" :classType="classType" />
       <v-right
         :allClassArticleList="allClassArticleList"
         :guestList="guestList"
@@ -39,7 +39,9 @@ export default {
       guestList: [],
       allClassArticleList: ["", "", "", ""],
       hotLikeArticleList: [],
-      hotVisitArticleList: []
+      hotVisitArticleList: [],
+      isClassType: false,
+      classType: ""
     };
   },
   created() {
@@ -75,10 +77,13 @@ export default {
       });
     },
     async startGetPageByClass(pageSize, pageIndex, classType) {
-      classType = classType.replace("#", "%23");
-      await getArticlesPageByClass(pageSize, pageIndex, classType).then(e => {
-        this.articleList = e;
-      });
+      this.isClassType = true;
+      this.classType = classType.replace("#", "%23");
+      await getArticlesPageByClass(pageSize, pageIndex, this.classType).then(
+        e => {
+          this.articleList = e;
+        }
+      );
     },
     async searchArticle(title) {
       await getArticleByDimTitle(title).then(e => {

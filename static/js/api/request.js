@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { throwErr } from './utils' // utils 捕捉服务端http状态码的方法
+import { Message, MessageBox } from 'element-ui'
 // 过滤请求
 axios.interceptors.request.use(config => {
   config.timeout = 10 * 1000 // 请求响应时间
@@ -23,14 +24,19 @@ axios.interceptors.response.use(
     if (error && error.response) {
       let res = {}
       res.code = error.response.status
-      res.msg = throwErr(error.response.status, error.response) // throwErr 捕捉服务端的http状态码 定义在utils工具类的方法
+      res.msg = throwErr(error.response.status, error.response) // throwErr 捕捉服务端的http状态码 定义在utils工具类的方法      
+      Message({
+        type: 'error',
+        duration: 5 * 1000,
+        message: "服务器出现一个Bug,工程师正在抓它呢!"
+      })
       return Promise.reject(res)
     }
     return Promise.reject(error)
   }
 )
 export default function request(method, url, data) {  // 暴露 request 给我们好API 管理  
-  let BaseUrl = "https://www.zswblog.xyz" + url;
+  let BaseUrl = "https://www.zswblog.xyz" + url;//www.zswblog.xyz
   method = method.toLocaleLowerCase()   // 封装RESTful API的各种请求方式 以 post get delete为例
   if (method === 'post') {
     return axios.post(BaseUrl, data)    // axios的post 默认转化为json格式

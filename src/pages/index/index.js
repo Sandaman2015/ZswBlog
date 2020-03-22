@@ -33,11 +33,3 @@ new Vue({
   components: { App2 },
   template: '<app2/>'
 })
-var _hmt = _hmt || [];
-window._hmt = _hmt; // 修改为window 全局变量
-(function () {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7c4bc7b78235ff486c94baae604b0231";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
