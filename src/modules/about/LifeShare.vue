@@ -131,6 +131,4 @@ hr {
 .clearfix:after {
   clear: both;
 }
-.el-col .el-col-4 {
-}
 </style>

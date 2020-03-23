@@ -93,7 +93,7 @@ export default {
     },
     beforeSubmit() {
       var userId = document.getElementById("userId").innerText;
-      if (userId !== 0) {
+      if (userId !== "0" && userId !== 0) {
         this.userId = userId;
         this.onSubmit("tagApplyForm");
       } else {

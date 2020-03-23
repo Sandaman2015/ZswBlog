@@ -36,7 +36,7 @@ axios.interceptors.response.use(
   }
 )
 export default function request(method, url, data) {  // 暴露 request 给我们好API 管理  
-  let BaseUrl = "https://www.zswblog.xyz" + url;//www.zswblog.xyz
+  let BaseUrl = "https://www.zswblog.xyz" + url;//
   method = method.toLocaleLowerCase()   // 封装RESTful API的各种请求方式 以 post get delete为例
   if (method === 'post') {
     return axios.post(BaseUrl, data)    // axios的post 默认转化为json格式

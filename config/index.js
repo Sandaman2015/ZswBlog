@@ -8,7 +8,7 @@ module.exports = {
   dev: {
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',//打包前需要改为./
+    assetsPublicPath: '/',//打包前需要改为./
     proxy: {
       '/api': {
         target: 'https://localhost:44376',// 设置你调用的接口域名和端口号 
@@ -53,7 +53,7 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../wwwroot/index.html'),
+    index: path.resolve(__dirname, '../wwwroot/index.html'),//打包后的文件所在位置
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../wwwroot'),

@@ -1,0 +1,40 @@
+.content {
+  background-color: white;
+}
+.warp-out {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.banner-img {
+  margin: 0 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
+}
+.banner-img:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+}
+.btn-up {
+  float: right;
+  margin: 20px 5px;
+}
+.comment-list {
+  width: 1000px;
+  margin: 0 auto;
+}
+#second {
+  margin: 50px 0px;
+}
+.h2 {
+  font-weight: 100;
+}
+.load-more {
+  text-align: center;
+  margin: 10px 0;
+}
+@media screen and (max-width: 475px) {
+  .banner-img {
+    width: 100%;
+    margin: 0 !important;
+  }
+}

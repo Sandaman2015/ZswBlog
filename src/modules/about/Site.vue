@@ -31,8 +31,8 @@
             可惜有些业务逻辑和数据库字段设计的不是很合理,一个好域名被我一手打烂！
             所以我重新设计并且将后端服务改为了.Net Core WebApi+Mysql,
             服务器也从原来的腾讯云转到了阿里云,并不是服务器不好只是我比较菜不会调优！
-            况且过度依赖IIS也是不好,想尝试一下Lnuix所以我迈出了舒适圈,再一次挑战自己。
-            运用到的框架：Autofac,AutoMapper,EFCore,第三方登录,DDD架构,Redis好像就这么多了
+            况且过度依赖IIS也是不好,想尝试一下Linux所以我迈出了舒适圈,再一次挑战自己。
+            运用到的框架：Autofac,AutoMapper,EFCore,第三方登录,DDD架构,Redis、、、好像就这么多了
             相关技术我会有时间分享的，
             后期还会使用JAVA的SpringBoot来进行高清重制！所以请期待把！
           </span>
@@ -49,7 +49,7 @@
         <p class="about-thanks animated swing">
           以下是为本站做过贡献的人:
           <br />
-          <span>隆重介绍我的同学---"🐒胖",感谢她为我设计的博客图标和一些页面的字体修改,这也让我明白美工的强大是程序员无法比拟的！</span>
+          <span>隆重介绍我的同学---"🐒胖童鞋",感谢她为我设计的博客图标和一些页面的字体修改,这也让我明白一个强大的美工是程序员无法比拟的！</span>
           <br />
           <span>
             感谢燕十三的博客开源分享,让我一些组件可以复制粘贴！
@@ -109,7 +109,6 @@ export default {
   },
   beforeDestroy() {
     clearInterval(this.timer);
-    console.log(this.timer);
   }
 };
 </script>

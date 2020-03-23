@@ -33,7 +33,7 @@
             <p class="mt05">
               Powered by .NET Core on Linux
               <i class="fa fa-linux" aria-hidden="true"></i>&nbsp;
-              <a href="http://this.zswblog.xyz">后台管理</a>
+              <a href="http://this.zswblog.xyz">后台管理</a>&nbsp;
             </p>
           </div>
         </div>
@@ -48,6 +48,33 @@ export default {
       copyright: "Copyright",
       footerText: "2019-2020 张晟玮 All rights reserved"
     };
+  },
+  mounted() {
+    const script = document.createElement("script");
+    script.src =
+      "https://v1.cnzz.com/z_stat.php?id=1278706390&web_id=1278706390"; //友盟中的代码
+    script.language = "JavaScript";
+    document.getElementsByClassName("mt05")[1].appendChild(script);
+
+    const a = document.createElement("a");
+    a.href =
+      "https://web.umeng.com/main.php?c=site&a=frame&siteid=1278706390#!/1584922058639/site/overview/1/1278706390/2020-03-23/2020-03-23"; //友盟中的代码
+    a.title = "网站统计";
+    a.text = "网站统计";
+    a.style = "font-size:13px;";
+    document.getElementsByClassName("mt05")[1].appendChild(a);
+  },
+  watch: {
+    $route() {
+      if (window._czc) {
+        let location = window.location; //路由变化
+        let contentUrl = location.hash; //自定义当前url，可带上路由以此区分每个页面
+        // console.log(contentUrl);
+        let refererUrl = "/";
+        window._czc.push(["_setAutoPageview", false]);
+        window._czc.push(["_trackPageview", contentUrl, refererUrl]);
+      }
+    }
   }
 };
 </script>
