@@ -427,4 +427,15 @@ p {
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
+@media screen and (max-width: 475px) {
+  .browser,
+  .location,
+  .submit {
+    margin-left: 5px;
+  }
+  .editor-reply {
+    margin: 0px;
+    width: 100% !important;
+  }
+}
 </style>

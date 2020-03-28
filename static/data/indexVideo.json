@@ -1,4 +1,5 @@
 {
   "videosrc": "https://singleblog.oss-cn-beijing.aliyuncs.com/video/goodtime.mp4",
-  "poster": "../../../static/images/bg_4.jpg"
+  "poster": "../../../static/images/bg_4.jpg",
+  "volume": 0
 }

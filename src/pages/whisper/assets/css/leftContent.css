@@ -359,3 +359,15 @@ hr {
 .layui-btn {
   width: 80px;
 }
+
+@media screen and (max-width: 475px) {
+  #categoryandsearch {
+    display: none;
+  }
+  .left-articlelist {
+    max-width: 100%;
+  }
+  .articleImage {
+    display: none!important;
+  }
+}

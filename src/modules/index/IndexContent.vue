@@ -1,7 +1,15 @@
 <template>
   <!-- <div class="wrap" id="wrap"> -->
   <div class="wrapper">
-    <video id="v1" autoplay loop style="width: 100%" :src="videoSrc" :poster="poster">
+    <video
+      id="v1"
+      autoplay
+      ref="localVideo"
+      loop
+      style="width: 100%"
+      :src="videoSrc"
+      :poster="poster"
+    >
       <!-- <source :src="videoSrc" /> -->
     </video>
     <div class="product_list" id="product_list">
@@ -176,6 +184,7 @@ export default {
       .then(resolve => {
         this.videoSrc = resolve.videosrc;
         this.poster = resolve.poster;
+        this.$refs.localVideo.volume = resolve.volume;
       })
       .catch(e => {
         console.log("请求视频失败,请刷新重试！", e);
@@ -195,5 +204,17 @@ video {
   z-index: -9999;
   /*灰色调*/
   /*-webkit-filter:grayscale(100%)*/
+}
+@media only screen and (max-width: 475px) {
+  #v1 {
+    display: none;
+  }
+  .wrapper {
+    background: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_index.jpg")
+      no-repeat fixed center !important;
+    background-position: 50% 50% !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
+  }
 }
 </style>

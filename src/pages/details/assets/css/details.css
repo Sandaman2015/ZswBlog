@@ -323,3 +323,24 @@ li {
 .article-content p {
   padding: 1.5 1.5;
 }
+@media screen and (max-width: 475px) {
+  .ad{
+    display: none;
+  }
+  .details-warp{
+    width: 97.5%!important;
+    margin: 3px 3px;
+  }
+  .article-content{
+    width: 100%!important;
+    margin: 3px 3px;
+  }
+  pre{
+    width: 100%!important;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+  }
+  .article-content > p{
+    margin: 10px;
+  }
+}

@@ -99,4 +99,15 @@ h2 {
 .fa-music {
   color: red;
 }
+@media screen and (max-width: 475px) {
+  .music-site {
+    margin-left: 1em;
+  }
+  .music-story {
+    width: 100% !important;
+  }
+  .music-story img {
+    max-width: 100% !important;
+  }
+}
 </style>

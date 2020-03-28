@@ -1,6 +1,6 @@
 <template>
   <div id="content">
-    <div class="card-holder box">
+    <div class="card-holder box-card">
       <div class="card-wrapper">
         <a href="javascript:void(0)" @click="changePage($event)">
           <div class="card bg-01">

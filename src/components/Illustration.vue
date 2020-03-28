@@ -47,4 +47,16 @@ p {
   color: white;
   font-family: "Hiragino Sans GB";
 }
+@media screen and (max-width: 475px) {
+  .container {
+    width: 100% !important;
+    text-align: center;
+  }
+  h1,
+  p {
+    width: 100% !important;
+    margin: 0;
+    left: 0;
+  }
+}
 </style>

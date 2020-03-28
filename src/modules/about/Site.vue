@@ -22,7 +22,6 @@
         </p>
       </div>
       <div class="about">
-        <h4>关于本站：</h4>
         <p class="about-site">
           本站为张晟玮博客2.0版本，目前已开源至Github和Gitee，欢迎大家给我点一个star！
           <br />后端：
@@ -32,7 +31,7 @@
             所以我重新设计并且将后端服务改为了.Net Core WebApi+Mysql,
             服务器也从原来的腾讯云转到了阿里云,并不是服务器不好只是我比较菜不会调优！
             况且过度依赖IIS也是不好,想尝试一下Linux所以我迈出了舒适圈,再一次挑战自己。
-            运用到的框架：Autofac,AutoMapper,EFCore,第三方登录,DDD架构,Redis、、、好像就这么多了
+            运用到的框架：Autofac,AutoMapper,EFCore,第三方登录,DDD架构,Redis、好像就这么多了
             相关技术我会有时间分享的，
             后期还会使用JAVA的SpringBoot来进行高清重制！所以请期待把！
           </span>
@@ -45,7 +44,6 @@
             运用到的框架：Node,Webpack,VueCli,Element-Ui,还有一些网上百度的自认为很漂亮的组件
           </span>
         </p>
-        <h4>感谢：</h4>
         <p class="about-thanks animated swing">
           以下是为本站做过贡献的人:
           <br />
@@ -96,7 +94,7 @@ export default {
       let minsold = Math.floor((e_hrsold - hrsold) * 60);
       let seconds = Math.floor((e_minsold - minsold) * 60);
       showtime.innerHTML =
-        "该网站在夹缝中生存了：" +
+        "网站运行了：" +
         daysold +
         "天" +
         hrsold +
@@ -175,5 +173,15 @@ i {
 a {
   text-decoration: none;
   color: #f25b67;
+}
+@media screen and (max-width: 475px) {
+  .about-site,
+  .about-thanks {
+    margin-left: 1em !important;
+  }
+  .location,
+  .date {
+    width: 97% !important;
+  }
 }
 </style>

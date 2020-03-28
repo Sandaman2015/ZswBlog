@@ -43,27 +43,43 @@
       <a href="index.html" class="logo show">ZswBlog</a>
       <div class="menu">
         <img :src="menu" @click="changeMenu" alt="menu" />
-        <ul v-if="showMenu">
-          <li>
-            <a href="index.html">首页</a>
-          </li>
-          <li>
-            <a href="whisper.html">文章</a>
-          </li>
-          <li>
-            <a href="tag.html">标签</a>
-          </li>
-          <li>
-            <a href="leacots.html">留言</a>
-          </li>
-          <li>
-            <a href="link.html">友链</a>
-          </li>
-          <li>
-            <a href="about.html">关于</a>
-          </li>
-        </ul>
       </div>
+    </div>
+    <div v-if="showMenu" class="mobile-menu">
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="../../static/images/index.png" />
+            &nbsp;&nbsp;首页
+          </a>
+        </li>
+        <li>
+          <a href="whisper.html">
+            <img src="../../static/images/article.png" />
+            &nbsp;&nbsp;文章
+          </a>
+        </li>
+        <li>
+          <a href="tags.html">
+            <img src="../../static/images/tag.png" />&nbsp;&nbsp;标签
+          </a>
+        </li>
+        <li>
+          <a href="leacots.html">
+            <img src="../../static/images/message.png" />&nbsp;&nbsp;留言
+          </a>
+        </li>
+        <li>
+          <a href="link.html">
+            <img src="../../static/images/link.png" />&nbsp;&nbsp;友链
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <img src="../../static/images/about.png" />&nbsp;&nbsp;关于
+          </a>
+        </li>
+      </ul>
     </div>
   </header>
 </template>
@@ -149,36 +165,58 @@ export default {
 
   .menu {
     position: relative;
-    line-height: 120px;
+    line-height: 100px;
     margin-left: 36%;
     width: 100%;
   }
-  .media-menu ul {
+  .menu img {
+    line-height: 100px;
+  }
+  .mobile-menu {
+    display: inline-block;
+    position: relative;
+    width: 96%;
+    height: 270px;
+    z-index: 99999;
+    margin: 0px 2%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .mobile-menu ul {
     content: "";
     display: table !important;
     clear: both;
-    position: relative;
-    margin-left: -20px;
-    margin-top: -40px;
-    width: 80px;
-    z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    width: 100%;
   }
-  .media-menu ul li {
+  .mobile-menu ul li {
     padding: 0 !important;
-    float: left;
-    width: 70px;
     height: 28px;
     line-height: 28px;
-    margin: 10px 0;
+    margin: 15px 0;
     transition: 0.5s;
   }
-  .media-menu ul li a {
+  .box-active .mobile-menu ul li a {
     display: block;
+    color: #fff !important;
     text-align: center;
-    font-size: 18px;
+    font-size: 26px;
     font-weight: 400;
     font-family: Microsoft YaHei;
+  }
+  .mobile-menu ul li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: Microsoft YaHei;
+  }
+  .mobile-menu ul li img {
+    /* display: block; */
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
   }
 }
 </style>

@@ -37,7 +37,7 @@
         <h4>个人信息：</h4>
         <p class="about-me animated bounceInLeft">
           <span>
-            <br />年龄:22
+            年龄:22
             <br />星座:双鱼座,其实我的偶像周恩来先生也是哦！👍
             <br />身高:183cm,我希望还能再长一点点！😊
             <br />体重:180,我觉得我有信心减肥！💪
@@ -52,7 +52,7 @@
         <h4>个人介绍：</h4>
         <p class="about-me animated bounceInDown">
           <span>
-            <br />没啥好介绍的，这个博客其实是为了找工作而开发的,同时也想拥有一个自己的开发经验，虽然很短暂但是我努力了
+            没啥好介绍的，这个博客其实是为了找工作而开发的,同时也想拥有一个自己的开发经验，虽然很短暂但是我努力了
             我就无所畏惧，哪怕别人说他是一坨屎，在我心中它依然伟岸笔挺！😑我这个人算一个工作狂，如果开始工作，别人不叫停的话
             我可能会一直工作下去，好像只有写代码才会这样，看来我还是喜欢敲代码！！哈哈哈哈😄
             现在的唯一想法就是去一线城市找一份稳定的工作🤑，找一个我爱的伴侣过完这短暂却精彩的一生！💑
@@ -100,9 +100,9 @@
           </div>
         </div>
         <div class="item">
-          <el-tag type="success" size="mini" effect="dark">Python</el-tag>
+          <el-tag type="success" size="mini" effect="dark">Vue</el-tag>
           <div class="pro">
-            <el-progress :text-inside="true" :stroke-width="20" :percentage="20"></el-progress>
+            <el-progress :text-inside="true" :stroke-width="20" :percentage="80"></el-progress>
           </div>
         </div>
       </div>
@@ -246,5 +246,24 @@ hr {
 .fa-location-arrow {
   color: #1da1f2;
   font-size: 18px;
+}
+@media screen and (max-width: 475px) {
+  .skill-progress {
+    height: auto;
+    width: 100%;
+  }
+  .about-me {
+    margin-left: 2em;
+  }
+  .item > .el-tag {
+    margin-left: 2em;
+  }
+  .location {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .about h4 {
+    width: 200px;
+  }
 }
 </style>

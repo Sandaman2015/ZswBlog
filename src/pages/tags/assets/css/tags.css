@@ -242,3 +242,20 @@ article section .brief {
 .cloud ul a:nth-child(8n) {
   background: #2db7f5;
 }
+@media screen and (max-width: 475px) {
+  .ad{
+    display: none;
+  }
+  .tagItem{
+    width: 100%;
+  }
+  article{
+    width: 100%;
+  }
+  article section time{
+    width: 35%;
+  }
+  article h3{
+    width: 50%;
+  }
+}

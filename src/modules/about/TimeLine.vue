@@ -77,4 +77,9 @@ export default {
 .el-timeline-item__node {
   background-color: cornflowerblue;
 }
+@media screen and (max-width: 475px) {
+  .el-card .is-always-shadow img {
+    max-width: 100% !important;
+  }
+}
 </style>
