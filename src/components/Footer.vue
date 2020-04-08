@@ -61,7 +61,7 @@ export default {
       "https://web.umeng.com/main.php?c=site&a=frame&siteid=1278706390#!/1584922058639/site/overview/1/1278706390/2020-03-23/2020-03-23"; //友盟中的代码
     a.title = "网站统计";
     a.text = "网站统计";
-    a.style = "font-size:13px;";
+    a.style = "font-size:13px;color: #212220;";
     document.getElementsByClassName("mt05")[1].appendChild(a);
   },
   watch: {

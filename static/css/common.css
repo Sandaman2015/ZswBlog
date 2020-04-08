@@ -3,7 +3,7 @@
   padding: 0;
 }
 body, button, input, select, textarea {
-  font: 300 1rem/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+  /* font: 300 1rem/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans; */
       font-size: 1rem;
 }
 ::-webkit-scrollbar-track-piece { 
@@ -34,16 +34,16 @@ body, button, input, select, textarea {
   height: 100%;
   -webkit-overflow-scrolling : touch;
   scroll-behavior:touch;
-  background-image: url("../../src/pages/about/assets/images/bg.png");
+  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
 #content{
-  background-image: url("../../src/pages/about/assets/images/bg.png");
+  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
 .content {
   display: -webkit-flex; /* Safari */
   -webkit-overflow-scrolling : touch;
   scroll-behavior:touch;
-  background-image: url("../../src/pages/about/assets/images/bg.png");
+  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
 .warp {
   width: 1240px;

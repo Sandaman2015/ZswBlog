@@ -5,7 +5,8 @@ import { Message, MessageBox } from 'element-ui'
 axios.interceptors.request.use(config => {
   config.timeout = 10 * 1000 // 请求响应时间
   config.headers = {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json; charset=utf-8',
+    'User-Agent': "PostmanRuntime/7.23.0"
   };
   return config
 }, error => {
@@ -36,7 +37,7 @@ axios.interceptors.response.use(
   }
 )
 export default function request(method, url, data) {  // 暴露 request 给我们好API 管理  
-  let BaseUrl = "https://www.zswblog.xyz" + url;// 此处可以换成你的后端请求地址
+  let BaseUrl = "https://localhost:44376" + url;// 此处可以换成你的后端请求地址
   method = method.toLocaleLowerCase()   // 封装RESTful API的各种请求方式 以 post get delete为例
   if (method === 'post') {
     return axios.post(BaseUrl, data)    // axios的post 默认转化为json格式
@@ -46,20 +47,6 @@ export default function request(method, url, data) {  // 暴露 request 给我�
     })
   } else if (method === 'delete') {
     return axios.delete(BaseUrl, {
-      params: data
-    })
-  }
-}
-export function requestCors(method, url, data) {  // 暴露 request 给我们好API 管理  
-  method = method.toLocaleLowerCase()   // 封装RESTful API的各种请求方式 以 post get delete为例
-  if (method === 'post') {
-    return axios.post(url, data)    // axios的post 默认转化为json格式
-  } else if (method === 'get') {
-    return axios.get(url, {
-      params: data
-    })
-  } else if (method === 'delete') {
-    return axios.delete(url, {
       params: data
     })
   }

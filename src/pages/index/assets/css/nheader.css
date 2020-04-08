@@ -12,7 +12,7 @@ update:2015-10-16;
 .header .btn_nav{display: block;width: 136px;height: 38px;text-align: center;line-height: 38px;position: absolute;top: 50%;left: 50%;margin: -19px 0 0 -68px;font-size: 16px;color:#fff;z-index: 6;}
 .header .btn_nav:hover{text-decoration: none;border: 2px solid #aeaba6;border-color: rgba(255,255,255,0.5);margin: -21px 0 0 -70px;}
 .header .btn_nav:focus{text-decoration: none;border: 2px solid #aeaba6;border-color: rgba(255,255,255,0.5);margin: -21px 0 0 -70px;}
-.header .btn_nav i{display: inline-block;+display: inline;+zoom: 1;background-image: url('../img/head_spr.png');position: relative;background-repeat: no-repeat;cursor: pointer;}
+.header .btn_nav i{background-color: rgba(0,0,0,0.5);display: inline-block;+display: inline;+zoom: 1;background-image: url('../img/head_spr.png');position: relative;background-repeat: no-repeat;cursor: pointer;}
 
 .header .ic_product{background-position: 0 0;width: 29px;height: 19px;margin-right: 13px;top: 3px;+top: 0;_margin-top: 9px;}
 .header .ic_more{background-position: 0 -24px;width: 26px;height: 19px;margin-right: 11px;top: 3px;+top: 0;_margin-top: 9px;}

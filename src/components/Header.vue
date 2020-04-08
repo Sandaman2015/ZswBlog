@@ -1,9 +1,7 @@
 <template>
   <header class="box">
-    <div>
-      <!-- //使用组件 -->
-      <scroll-top />
-    </div>
+    <!-- //使用组件 -->
+    <scroll-top />
     <a href="index.html" class="logo hide">ZswBlog</a>
     <!-- <a href="index.html" class="logo">ZswBlog</a> -->
     <nav class="site-nav">
@@ -100,7 +98,6 @@ export default {
       userImage: require("../../static/images/qq.png"),
       flag: false,
       value: false,
-      msg: "来试试登录吧！",
       showMenu: false,
       menu: require("../../static/images/cc-menu.png")
     };
@@ -124,25 +121,9 @@ export default {
       if (image !== null && id !== null) {
         this.userId = id;
         this.userImage = image.replace("%3A", ":");
-        this.msg = "记得留言之前要先填写好邮箱哦！否则会收不到最新的回复哦！";
-        const h = this.$createElement;
-        this.$message({
-          message: h("p", null, [
-            h("span", null),
-            h("i", { style: "color: #67C23A" }, "欢迎登录!")
-          ]),
-          type: "success"
-        });
       } else {
         this.userImage = require("../../static/images/qq.png");
         this.userId = 0;
-        const h = this.$createElement;
-        this.$message({
-          message: h("p", null, [
-            h("span", null),
-            h("i", { style: "color: #67C23A" }, "来试试登录吧！")
-          ])
-        });
       }
     }
   }

@@ -646,7 +646,7 @@ export default {
       let that = this;
       if (this.comment !== "" && this.comment !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
-        if (userId != 0) {
+        if (parseInt(userId) != 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";

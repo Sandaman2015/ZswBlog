@@ -124,17 +124,19 @@ export default {
     playLoading() {
       this.$notify({
         title: "浏览器提醒",
-        message: "您正在使用" + this.broswer + "浏览器!欢迎访问张晟玮博客！",
+        message:
+          "您正在使用" + this.broswer + "内核的浏览器!欢迎访问张晟玮博客！",
         type: "success"
       });
     },
     goToGithub() {
       this.$notify({
         title: "提醒",
-        message: "即将跳转到博客园!那里也不错哦！",
+        message: "即将跳转到Gitee!点击Star！祝你运气爆棚！",
         type: "success"
       });
-      window.location.href = "https://www.cnblogs.com/sandaman2019/";
+      window.location.href =
+        "https://gitee.com/kidsnosplit/zswblog_open_source";
     }
   },
   mounted() {
@@ -154,6 +156,7 @@ export default {
   bottom: 12rem;
   width: 36px;
   height: 36px;
+  z-index: 214748367;
 }
 .icons {
   display: block;

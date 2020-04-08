@@ -3,7 +3,7 @@
   <ul class="nav_list">
     <li class="nav_li">
       <a href="javascript:;" class="btn_nav" id="nav_more">
-        <i class="ic_more png"></i>更多
+        <i class="ic_more png"></i>
       </a>
       <div class="more_nav" id="more_nav">
         <i class="ic_bdot png" id="h_bdot"></i>

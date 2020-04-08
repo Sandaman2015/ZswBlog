@@ -71,9 +71,12 @@ export default {
               }
             });
           } else {
-            this.$message({
-              message: "你没登陆就跳过来？没意思了！",
-              type: "error"
+            this.$alert("你没登陆就跳过来？", "未登录", {
+              confirmButtonText: "确定",
+              callback: action => {
+                window.location.href =
+                  "https://graph.qq.com/oauth2.0/authorize?client_id=101858486&response_type=token&scope=all&redirect_uri=http://www.zswblog.xyz/index.html";
+              }
             });
           }
         } else {

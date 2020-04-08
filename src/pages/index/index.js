@@ -5,12 +5,19 @@ import App from './App'
 import App2 from './App2'
 import "./assets/css/nheader.css";
 import "./assets/css/nstyle.css";
+import "../../../static/css/font-awesome.min.css";
 import "../../../static/js/jquery.js"
 import "../../../static/js/page.js"
-
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueAwesomeSwiper)
+Vue.use(ElementUI)
+Vue.use(VueClipboard)// 复制内容到剪贴板
 NProgress.configure({
   easing: 'ease',  // 动画方式    
   speed: 2500,  // 递增进度条的速度    
@@ -29,7 +36,7 @@ new Vue({
   template: '<app/>'
 })
 new Vue({
-  el: '.wrap',
+  el: '.index-content',
   components: { App2 },
   template: '<app2/>'
 })

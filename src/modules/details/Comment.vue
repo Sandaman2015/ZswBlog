@@ -144,7 +144,7 @@ export default {
       const mainText = this.$refs.textArea[index].getContent();
       if (mainText !== "" && mainText !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
-        if (userId !== 0) {
+        if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";
@@ -254,7 +254,7 @@ export default {
       }
       if (this.replyText !== "" && this.replyText !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
-        if (userId !== 0) {
+        if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";

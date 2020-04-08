@@ -90,7 +90,7 @@ export default {
         // "image", // 插入图片
         // "table", // 表格
         // "video", // 插入视频
-        "code", // 插入代码
+        // "code", // 插入代码
         "undo" // 撤销
         // "redo" // 重复
         // "fullscreen" // 全屏
@@ -164,7 +164,7 @@ export default {
   min-height: 180px !important;
   max-height: 180px;
   overflow-y: auto;
-  /* border-radius: 15px; */
+  overflow-y: hidden;
 }
 .text {
   border-radius: 15px;

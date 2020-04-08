@@ -37,6 +37,7 @@ $(document).ready(function () {
     }
     return false;
   }();
+
   var isIE6 = navigator.userAgent.indexOf("MSIE 6.0") > 0;
   //页面自缩放
   var resize = function () {
@@ -85,7 +86,6 @@ $(document).ready(function () {
   };
   $(window).resize(resize);
   resize();
-
   var pageChange = function (idx) {
     if (data.isOnbtn)
       return;

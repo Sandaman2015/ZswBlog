@@ -124,7 +124,7 @@ export default {
       const mainText = this.$refs.textArea[index].getContent();
       if (mainText !== "" && mainText !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
-        if (userId !== 0) {
+        if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";
@@ -154,11 +154,12 @@ export default {
                 });
                 this.changeMessageList();
               } else if (e.code == 401) {
-                this.$message({
-                  message: "请注册邮箱后再填写哦!",
-                  type: "error"
+                this.$alert("请注册邮箱后再填写哦!", "未登录", {
+                  confirmButtonText: "确定",
+                  callback: action => {
+                    window.location.href = "register.html";
+                  }
                 });
-                window.location.href = "register.html";
               } else {
                 this.$message({
                   message: e.msg,
@@ -167,11 +168,12 @@ export default {
               }
             });
           } else {
-            this.$message({
-              message: "请注册邮箱后再填写哦!",
-              type: "error"
+            this.$alert("请注册邮箱后再填写哦!", "未登录", {
+              confirmButtonText: "确定",
+              callback: action => {
+                window.location.href = "register.html";
+              }
             });
-            window.location.href = "register.html";
           }
         } else {
           this.$message({
@@ -206,7 +208,7 @@ export default {
       }
       if (this.replyText !== "" && this.replyText !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
-        if (userId !== 0) {
+        if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";
@@ -236,11 +238,12 @@ export default {
                 });
                 this.changeMessageList();
               } else if (e.code == 401) {
-                this.$message({
-                  message: "请注册邮箱后再填写哦!",
-                  type: "error"
+                this.$alert("请注册邮箱后再填写哦!", "未登录", {
+                  confirmButtonText: "确定",
+                  callback: action => {
+                    window.location.href = "register.html";
+                  }
                 });
-                window.location.href = "register.html";
               } else {
                 this.$message({
                   message: e.msg,
@@ -249,11 +252,12 @@ export default {
               }
             });
           } else {
-            this.$message({
-              message: "请注册邮箱后再填写哦!",
-              type: "error"
+            this.$alert("请注册邮箱后再填写哦!", "未登录", {
+              confirmButtonText: "确定",
+              callback: action => {
+                window.location.href = "register.html";
+              }
             });
-            window.location.href = "register.html";
           }
         } else {
           this.$message({
