@@ -188,7 +188,7 @@
           >
             <a href="javascript:void(0)">
               <div class="imgBox">
-                <img src="http://www.jq22.com/demo/jquerygdlb201909152242/images/t5.png" alt />
+                <img :src="item.articleImage" alt="文章插图" />
               </div>
               <span class="source">{{item.articleTitle}}</span>
               <h2 class="title">{{item.articleTime|filterDate}}</h2>
@@ -227,7 +227,7 @@
                   <div class="ols-desc-name">
                     {{item.userName}}
                     <br />
-                    <span>{{item.location}}</span>
+                    <span>{{item.messageDate|filterDate}}</span>
                   </div>
                 </div>
                 <div class="ols-body">
@@ -427,76 +427,25 @@ export default {
         spaceBetween: 30,
         centeredSlides: true
       },
-      messageList: [
-        {
-          userPortrait:
-            "http://thirdqq.qlogo.cn/g?b=oidb&k=G9TRERmssnfaKEE3OKxVicA&s=40&t=1584632756",
-          userName: "不知名丶大魔王",
-          messageDate: "2020T04-03 13:45",
-          message:
-            "slide1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam corrupti expedita, laudantium dolorem a aut, praesentium voluptas deleniti explicabo officiis temporibus suscipit possimus, quibusdam sequi. Aliquam repellat quibusdam qui."
-        },
-        {
-          userPortrait:
-            "http://thirdqq.qlogo.cn/g?b=oidb&k=G9TRERmssnfaKEE3OKxVicA&s=40&t=1584632756",
-          userName: "工具站没完成不改名",
-          messageDate: "2020T04-03 13:45",
-          message:
-            "slide1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam corrupti expedita, laudantium dolorem a aut, praesentium voluptas deleniti explicabo officiis temporibus suscipit possimus, quibusdam sequi. Aliquam repellat quibusdam qui."
-        },
-        {
-          userPortrait:
-            "http://thirdqq.qlogo.cn/g?b=oidb&k=G9TRERmssnfaKEE3OKxVicA&s=40&t=1584632756",
-          userName: "啦啦啦",
-          messageDate: "2020T04-03 13:45",
-          message:
-            "slide1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam corrupti expedita, laudantium dolorem a aut, praesentium voluptas deleniti explicabo officiis temporibus suscipit possimus, quibusdam sequi. Aliquam repellat quibusdam qui."
-        },
-        {
-          userPortrait:
-            "http://thirdqq.qlogo.cn/g?b=oidb&k=G9TRERmssnfaKEE3OKxVicA&s=40&t=1584632756",
-          userName: "菜菜",
-          messageDate: "2020T04-03 13:45",
-          message:
-            "slide1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam corrupti expedita, laudantium dolorem a aut, praesentium voluptas deleniti explicabo officiis temporibus suscipit possimus, quibusdam sequi. Aliquam repellat quibusdam qui."
-        }
-      ],
-      hotArticles: [
-        {
-          articleId: 1,
-          articleTitle: "C#使用Redis",
-          articleTime: "2019-08-24",
-          articleContent:
-            "WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod at veritatis magnam laudantium. Incidunt perferendis facilis doloribus facere nesciunt corporis sunt suscipit perspiciatis? Soluta accusamus sint nam, enim ab, dolores odio alias accusantium tempora id debitis voluptates facilis? Enim, ex! Qui sunt aperiam culpa tempora vel totam velit veritatis assumenda alias, cum sed recusandae? Provident molestias et nihil officiis veniam vero doloribus dignissimos aliquid minima nostrum, error ullam est repellendus fugit sapiente soluta dolores debitis libero. Velit nam eos excepturi, perspiciatis fugiat a praesentium et fuga id accusamus magni corporis? Earum hic commodi animi voluptatibus reiciendis, quidem consequuntur unde."
-        },
-        {
-          articleId: 2,
-          articleTitle: "JAVA使用Redis",
-          articleTime: "2019-08-29",
-          articleContent:
-            "WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod at veritatis magnam laudantium. Incidunt perferendis facilis doloribus facere nesciunt corporis sunt suscipit perspiciatis? Soluta accusamus sint nam, enim ab, dolores odio alias accusantium tempora id debitis voluptates facilis? Enim, ex! Qui sunt aperiam culpa tempora vel totam velit veritatis assumenda alias, cum sed recusandae? Provident molestias et nihil officiis veniam vero doloribus dignissimos aliquid minima nostrum, error ullam est repellendus fugit sapiente soluta dolores debitis libero. Velit nam eos excepturi, perspiciatis fugiat a praesentium et fuga id accusamus magni corporis? Earum hic commodi animi voluptatibus reiciendis, quidem consequuntur unde."
-        },
-        {
-          articleId: 3,
-          articleTitle: "Python使用Redis",
-          articleTime: "2019-08-30",
-          articleContent:
-            "WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quod at veritatis magnam laudantium. Incidunt perferendis facilis doloribus facere nesciunt corporis sunt suscipit perspiciatis? Soluta accusamus sint nam, enim ab, dolores odio alias accusantium tempora id debitis voluptates facilis? Enim, ex! Qui sunt aperiam culpa tempora vel totam velit veritatis assumenda alias, cum sed recusandae? Provident molestias et nihil officiis veniam vero doloribus dignissimos aliquid minima nostrum, error ullam est repellendus fugit sapiente soluta dolores debitis libero. Velit nam eos excepturi, perspiciatis fugiat a praesentium et fuga id accusamus magni corporis? Earum hic commodi animi voluptatibus reiciendis, quidem consequuntur unde."
-        }
-      ],
+      messageList: [],
+      hotArticles: [],
       numberAdd: {
         startNum: 0,
-        visitCount: 1377,
-        runDays: 180,
-        articleCount: 150,
-        siteTag: 35,
-        version: "v2.0.4"
+        visitCount: 0,
+        runDays: 0,
+        articleCount: 0,
+        siteTag: 0,
+        version: "v2.1.4"
       }
     };
   },
   filters: {
     filterDate(date) {
-      return date.replace("T", " ");
+      if (date.indexOf("T") !== -1) {
+        return date.replace("T", " ");
+      } else {
+        return date;
+      }
     }
   },
   created() {
@@ -519,9 +468,9 @@ export default {
     async initData() {
       await getInitData().then(e => {
         this.numberAdd.visitCount = e.dataCount.visit;
-        this.numberAdd.runDays = e.dataCount.time;
-        this.numberAdd.articleCount = e.dataCount.articles;
-        this.numberAdd.siteTag = e.dataCount.tags;
+        this.numberAdd.runDays = e.dataCount.runDays;
+        this.numberAdd.articleCount = e.dataCount.articleCount;
+        this.numberAdd.siteTag = e.dataCount.tagsCount;
         this.hotArticles = e.articles;
         this.messageList = e.messages;
       });
