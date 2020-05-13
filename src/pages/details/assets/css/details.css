@@ -49,6 +49,9 @@
   transition: 0.5s;
   border: #fc9d9a solid 1px;
 }
+.w-e-text{
+  overflow-y: hidden!important;
+}
 .article-content {
   width: 880px;
   /* min-height: 1000px; */

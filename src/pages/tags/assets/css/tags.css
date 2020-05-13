@@ -90,25 +90,28 @@ article:hover {
 .tagItem article:first-child h3 {
   color: #036564;
 }
-.tagItem article:nth-child(8n-7) h3 {
+.tagItem article:nth-child(9n-8) {
+  color: #3a3a38;
+}
+.tagItem article:nth-child(9n-7) h3 {
   color: #beedc7;
 }
-.tagItem article:nth-child(8n-6) h3 {
+.tagItem article:nth-child(9n-6) h3 {
   color: #eb6841;
 }
-.tagItem article:nth-child(8n-5) h3 {
+.tagItem article:nth-child(9n-5) h3 {
   color: #3fb8af;
 }
-.tagItem article:nth-child(8n-4) h3 {
+.tagItem article:nth-child(9n-4) h3 {
   color: #19caad;
 }
-.tagItem article:nth-child(8n-3) h3 {
+.tagItem article:nth-child(9n-3) h3 {
   color: #fc9d9a;
 }
-.tagItem article:nth-child(8n-2) h3 {
+.tagItem article:nth-child(9n-2) h3 {
   color: #edc951;
 }
-.tagItem article:nth-child(8n-1) h3 {
+.tagItem article:nth-child(9n-1) h3 {
   color: #ed4014;
 }
 .tagItem article:nth-child(8n) h3 {
@@ -121,6 +124,7 @@ article h3 {
   text-align: right;
   font-size: 1.4em;
   padding: 10px 0 20px;
+  font-family: 'Courier New', Courier, monospace;
 }
 article section {
   padding: 0 0 17px;
@@ -218,25 +222,28 @@ article section .brief {
 .cloud ul a:first-child {
   background: #036564;
 }
-.cloud ul a:nth-child(8n-7) {
+.cloud ul a:nth-child(9n-8) {
+  background: #3a3a38;
+}
+.cloud ul a:nth-child(9n-7) {
   background: #beedc7;
 }
-.cloud ul a:nth-child(8n-6) {
+.cloud ul a:nth-child(9n-6) {
   background: #eb6841;
 }
-.cloud ul a:nth-child(8n-5) {
+.cloud ul a:nth-child(9n-5) {
   background: #3fb8af;
 }
-.cloud ul a:nth-child(8n-4) {
+.cloud ul a:nth-child(9n-4) {
   background: #19caad;
 }
-.cloud ul a:nth-child(8n-3) {
+.cloud ul a:nth-child(9n-3) {
   background: #fc9d9a;
 }
-.cloud ul a:nth-child(8n-2) {
+.cloud ul a:nth-child(9n-2) {
   background: #edc951;
 }
-.cloud ul a:nth-child(8n-1) {
+.cloud ul a:nth-child(9n-1) {
   background: #ed4014;
 }
 .cloud ul a:nth-child(8n) {

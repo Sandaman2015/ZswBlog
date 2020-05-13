@@ -32,7 +32,7 @@
             <li
               v-for="item in Linklist"
               class="list-item wow fadeInLeft wow bounceInRight"
-              style="max-width:200px;min-height:350px"
+              style="max-width:200px;min-height:300px"
             >
               <div class="col-md-4">
                 <a :href="item.linkSrc" target="_blank" class="fh5co-project-item image-popup">
@@ -42,7 +42,7 @@
                     </div>
                     <img :src="item.linkImage" alt="Image" class="img-responsive" />
                   </figure>
-                  <div class="fh5co-text" style="height:120px">
+                  <div class="fh5co-text" style="height:100px">
                     <h2>{{item.linkTitle}}</h2>
                     <p>{{item.linkIntroduce}}</p>
                   </div>

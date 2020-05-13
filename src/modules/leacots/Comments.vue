@@ -120,7 +120,7 @@ export default {
     }
   },
   methods: {
-    mainSubmit(index, target) {
+    async mainSubmit(index, target) {
       const mainText = this.$refs.textArea[index].getContent();
       if (mainText !== "" && mainText !== "<p><br></p>") {
         var userId = document.getElementById("userId").innerText;
@@ -128,12 +128,11 @@ export default {
           if (getCookie("userEmail") !== null) {
             let ip = "";
             let url = "https://bird.ioliu.cn/ip";
-            this.$jsonp(url).then(e => {
+            await this.$jsonp(url).then(e => {
               ip = e.data.ip;
             });
-            let tUserId = parseInt(
-              target.target.parentElement.parentElement.childNodes[2].innerText
-            );
+            let tUserId =
+              target.target.parentElement.parentElement.childNodes[2].innerText;
             let tId = parseInt(
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
@@ -146,7 +145,7 @@ export default {
               TargetId: tId,
               TargetUserId: tUserId
             };
-            addMessage(message).then(e => {
+            await addMessage(message).then(e => {
               if (e.code == 200) {
                 this.$message({
                   message: e.msg,
@@ -215,9 +214,8 @@ export default {
             await this.$jsonp(url).then(e => {
               ip = e.data.ip;
             });
-            let tUserId = parseInt(
-              target.target.parentElement.parentElement.childNodes[2].innerText
-            );
+            let tUserId =
+              target.target.parentElement.parentElement.childNodes[2].innerText;
             let tId = parseInt(
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
@@ -422,7 +420,6 @@ li {
   /* float: right; */
   min-height: 108px;
   margin-top: 10px;
-  border-top: ghostwhite solid 1px;
   list-style: none;
   display: block;
 }

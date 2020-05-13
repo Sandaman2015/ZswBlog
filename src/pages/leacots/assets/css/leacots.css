@@ -32,6 +32,9 @@
   text-align: center;
   margin: 10px 0;
 }
+.w-e-text{
+  overflow-y: hidden!important;
+}
 @media screen and (max-width: 475px) {
   .banner-img {
     width: 100%;
