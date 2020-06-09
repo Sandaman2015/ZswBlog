@@ -15,7 +15,7 @@
     "element-ui": "^2.13.0",
     "highlight.js": "^10.0.3",
     "hls.js": "^0.13.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nprogress": "^0.2.0",
     "v-tag-cloud": "^1.0.3",
     "vue": "^2.5.2",
