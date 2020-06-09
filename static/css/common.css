@@ -2,71 +2,87 @@
   margin: 0;
   padding: 0;
 }
-body, button, input, select, textarea {
+
+body,
+button,
+input,
+select,
+textarea {
   /* font: 300 1rem/1.8 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans; */
-      font-size: 1rem;
+  font-size: 1rem;
 }
-::-webkit-scrollbar-track-piece { 
+
+::-webkit-scrollbar-track-piece {
   /* //滚动条凹槽的颜色，还可以设置边框属性 */
-  background-color:#f8f8f8;
-  }
-  
-  ::-webkit-scrollbar {
-    /* //滚动条的宽度 */
-  width:9px;
-  height:9px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    /* //滚动条的设置 */
-  
-  background-color:#dddddd;  
-  background-clip:padding-box;  
-  min-height:28px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {  
-  background-color:#bbb;  
-  }
-#whisper,#link {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+  /* //滚动条的宽度 */
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* //滚动条的设置 */
+
+  background-color: #dddddd;
+  background-clip: padding-box;
+  min-height: 28px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+#whisper,
+#link {
   position: relative;
   width: 100%;
   height: 100%;
-  -webkit-overflow-scrolling : touch;
-  scroll-behavior:touch;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: touch;
   background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
-#content{
+
+#content {
   background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
+
 .content {
-  display: -webkit-flex; /* Safari */
-  -webkit-overflow-scrolling : touch;
-  scroll-behavior:touch;
+  display: -webkit-flex;
+  /* Safari */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: touch;
   background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
+
 .warp {
-  width: 1240px;
+  width: 1200px;
   margin: 0 auto;
-  -webkit-overflow-scrolling : touch;
-  scroll-behavior:touch;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: touch;
 }
-.cont{
-  width: 1000px;
+
+.cont {
+  width: 980px;
   margin: 0 auto;
-  -webkit-overflow-scrolling : touch;
-  scroll-behavior:touch;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: touch;
 }
-.hr-blue{
-  background-color: #1E9FFF!important;
+
+.hr-blue {
+  background-color: #1E9FFF !important;
 }
-hr{
+
+hr {
   height: 1px;
-    margin: 10px 0;
-    border: 0;
-    clear: both;
+  margin: 10px 0;
+  border: 0;
+  clear: both;
 }
-hr{
+
+hr {
   display: block;
   unicode-bidi: isolate;
   margin-block-start: 0.5em;
@@ -75,24 +91,29 @@ hr{
   margin-inline-end: auto;
   overflow: hidden;
 }
-p{
+
+p {
   color: #69606b;
-  font-family: 'Source Sans Light',sans-serif;
-text-rendering: optimizeLegibility;
-letter-spacing: -0.5px;
+  font-family: 'Source Sans Light', sans-serif;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.5px;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 @media screen and (max-width:475px) {
   .comment-list {
-    width: 100%!important;
+    width: 100% !important;
   }
-  .warp{
-    width: 100%!important;
+
+  .warp {
+    width: 100% !important;
   }
-  .warp-out{
-    width: 100%!important;
+
+  .warp-out {
+    width: 100% !important;
   }
 
   .cont {
@@ -118,9 +139,11 @@ a{
   header {
     display: block !important;
   }
-.hide{
-  display: none!important;
-}
+
+  .hide {
+    display: none !important;
+  }
+
   .show {
     position: relative;
     padding-left: 50px !important;

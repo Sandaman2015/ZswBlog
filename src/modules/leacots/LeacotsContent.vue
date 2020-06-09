@@ -2,7 +2,12 @@
   <div class="content">
     <div class="warp">
       <div class="form-box warp-out">
-        <el-tooltip class="item" effect="dark" content="愿你能遇良人" placement="top-start">
+        <el-tooltip
+          class="item"
+          effect="dark"
+          content="愿你遇良人 予你欢喜城 长歌暖浮生 怎知我所希求"
+          placement="left-start"
+        >
           <el-row :gutter="24">
             <el-col :span="24">
               <h2 class="h2">留言板</h2>
@@ -76,7 +81,7 @@ export default {
       this.message = this.$refs.baseTextarea.getContent();
       let that = this;
       if (this.message !== "" && this.message !== "<p><br></p>") {
-        var userId = document.getElementById("userId").innerText;
+        let userId = document.getElementById("userId").innerText;
         if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
@@ -84,7 +89,7 @@ export default {
             await this.$jsonp(url).then(e => {
               ip = e.data.ip;
             });
-            var message = {
+            let message = {
               Location: ip,
               Browser: this.getBrowser(),
               UserId: userId,
@@ -132,9 +137,9 @@ export default {
       }
     },
     getBrowser() {
-      var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
-      var broswer = "";
-      var isOpera = userAgent.indexOf("Opera") > -1;
+      let userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+      let broswer = "";
+      let isOpera = userAgent.indexOf("Opera") > -1;
       if (isOpera) {
         broswer = "Opera";
       } else if (userAgent.indexOf("Firefox") > -1) {

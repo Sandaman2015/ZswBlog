@@ -32,9 +32,11 @@ body {
 .text-blue {
   color: #1c87bf;
 }
+
 .text-grew {
   color: #9f9f9f;
 }
+
 .text-green {
   color: #95c91e;
 }
@@ -66,57 +68,76 @@ body {
 .point-purple {
   background-color: #d32d93;
 }
+
 .leftContent {
   width: 600px;
   margin: 0 15px;
   min-height: 800px;
   float: left;
 }
+
 article {
   position: relative;
   border-radius: 25px;
   width: 500px;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 25px;
 }
+
 article:hover {
   cursor: pointer;
-  border: #fa6854 solid 1px;
+  border-radius: 25px;
+  border: lightblue solid 1px;
   transition: 1s;
 }
+
 .tagItem {
   width: 60%;
   float: left;
   min-height: 660px;
 }
+
 .tagItem article:first-child h3 {
   color: #036564;
 }
+
 .tagItem article:nth-child(9n-8) {
   color: #3a3a38;
 }
+
 .tagItem article:nth-child(9n-7) h3 {
   color: #beedc7;
 }
+
 .tagItem article:nth-child(9n-6) h3 {
   color: #eb6841;
 }
+
 .tagItem article:nth-child(9n-5) h3 {
   color: #3fb8af;
 }
+
 .tagItem article:nth-child(9n-4) h3 {
   color: #19caad;
 }
+
 .tagItem article:nth-child(9n-3) h3 {
   color: #fc9d9a;
 }
+
 .tagItem article:nth-child(9n-2) h3 {
   color: #edc951;
 }
+
 .tagItem article:nth-child(9n-1) h3 {
   color: #ed4014;
 }
+
 .tagItem article:nth-child(8n) h3 {
   color: #2db7f5;
 }
+
 article h3 {
   width: 35%;
   height: 20px;
@@ -126,11 +147,13 @@ article h3 {
   padding: 10px 0 20px;
   font-family: 'Courier New', Courier, monospace;
 }
+
 article section {
   padding: 0 0 17px;
   position: relative;
   margin-left: 25px;
 }
+
 article section:before {
   content: "";
   width: 5px;
@@ -140,61 +163,68 @@ article section:before {
   background: #e6e6e6;
   position: absolute;
 }
+
 article section:last-child:before {
   display: none;
 }
+
 article a {
   color: #1d1d1d;
   text-decoration: none;
 }
+
 article a:hover {
   transition: 0.5s;
   color: #1c87bf;
   text-decoration: underline;
 }
+
 article section time {
   width: 25%;
   display: block;
   position: absolute;
 }
-article section time > span {
+
+article section time>span {
   display: block;
   text-align: right;
 }
+
 article section aside {
   color: #3a3a38;
   margin-left: 45%;
   padding-bottom: 15px;
 }
+
 article section .brief {
   color: #9f9f9f;
 }
+
 .ad {
   float: left;
   width: 300px;
   min-height: 800px;
   border-radius: 10px;
-  border: #999 solid 1px;
+  border: lightblue solid 1px;
 }
-.ad:hover {
-  border: #fc9d9a solid 1px;
-  transition: 0.5s;
-}
+
 .whitebg {
   border-radius: 3px;
   padding: 20px;
   margin-bottom: 20px;
   overflow: hidden;
 }
+
 .htitle {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 40px;
   border-bottom: 1px solid #eee;
   color: #484848;
-  font-weight: normal;
+  font-weight: weight;
   position: relative;
   margin-bottom: 10px;
 }
+
 .cloud ul a {
   line-height: 24px;
   height: 24px;
@@ -209,60 +239,79 @@ article section .brief {
   -o-transition: all 0.5s;
   transition: all 0.5s;
   color: #fff;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
 }
+
 .cloud ul a:hover {
   color: black;
   transition: 0.5s;
 }
+
 .cloud ul a {
   text-decoration: none;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .cloud ul a:first-child {
   background: #036564;
 }
+
 .cloud ul a:nth-child(9n-8) {
   background: #3a3a38;
 }
+
 .cloud ul a:nth-child(9n-7) {
   background: #beedc7;
 }
+
 .cloud ul a:nth-child(9n-6) {
   background: #eb6841;
 }
+
 .cloud ul a:nth-child(9n-5) {
   background: #3fb8af;
 }
+
 .cloud ul a:nth-child(9n-4) {
   background: #19caad;
 }
+
 .cloud ul a:nth-child(9n-3) {
   background: #fc9d9a;
 }
+
 .cloud ul a:nth-child(9n-2) {
   background: #edc951;
 }
+
 .cloud ul a:nth-child(9n-1) {
   background: #ed4014;
 }
+
 .cloud ul a:nth-child(8n) {
   background: #2db7f5;
 }
+
 @media screen and (max-width: 475px) {
-  .ad{
+  .ad {
     display: none;
   }
-  .tagItem{
+
+  .tagItem {
     width: 100%;
   }
-  article{
+
+  article {
     width: 100%;
   }
-  article section time{
+
+  article section time {
     width: 35%;
   }
-  article h3{
+
+  article h3 {
     width: 50%;
   }
 }

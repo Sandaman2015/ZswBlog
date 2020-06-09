@@ -38,8 +38,8 @@ export default {
     };
   },
   created() {
-    var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
-    var isOpera = userAgent.indexOf("Opera") > -1;
+    let userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+    let isOpera = userAgent.indexOf("Opera") > -1;
     if (isOpera) {
       this.icon = "icon fa fa-spin fa-opera";
       this.broswer = "Opera";

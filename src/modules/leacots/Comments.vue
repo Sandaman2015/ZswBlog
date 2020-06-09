@@ -2,7 +2,7 @@
   <div>
     <div class="cont wow fadeInRight">
       <ul>
-        <li v-for="(item,index) in commentList" ref="mainitem">
+        <li v-for="(item,index) in commentList" :key="index" ref="mainitem">
           <div class="main-reply">
             <div class="user-info">
               <!-- 图片的路径 -->
@@ -44,7 +44,11 @@
             </div>
           </div>
           <div class="all-reply">
-            <div class="reply-list" v-for="(replyEntry,replyIndex) in item.messagesChildren">
+            <div
+              class="reply-list"
+              v-for="(replyEntry,replyIndex) in item.messagesChildren"
+              :key="replyIndex"
+            >
               <div class="user-info">
                 <img :src="replyEntry.userPortrait" alt="头像" class="userImage" />
                 <p class="info">
@@ -59,7 +63,7 @@
                 <div class="comment sec-coment" v-html="replyEntry.message"></div>
                 <div class="more">
                   <p class="date">
-                    <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
                     {{replyEntry.messageDate|filterDate}}
                   </p>
                   <p class="location">
@@ -123,7 +127,7 @@ export default {
     async mainSubmit(index, target) {
       const mainText = this.$refs.textArea[index].getContent();
       if (mainText !== "" && mainText !== "<p><br></p>") {
-        var userId = document.getElementById("userId").innerText;
+        let userId = document.getElementById("userId").innerText;
         if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
@@ -137,7 +141,7 @@ export default {
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
             // 主回复
-            var message = {
+            let message = {
               Location: ip,
               Browser: this.getBrowser(),
               UserId: userId,
@@ -206,7 +210,7 @@ export default {
           break;
       }
       if (this.replyText !== "" && this.replyText !== "<p><br></p>") {
-        var userId = document.getElementById("userId").innerText;
+        let userId = document.getElementById("userId").innerText;
         if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
@@ -220,7 +224,7 @@ export default {
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
             // 主回复
-            var message = {
+            let message = {
               Location: ip,
               Browser: this.getBrowser(),
               UserId: userId,
@@ -271,9 +275,9 @@ export default {
       }
     },
     getBrowser() {
-      var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
-      var broswer = "";
-      var isOpera = userAgent.indexOf("Opera") > -1;
+      let userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+      let broswer = "";
+      let isOpera = userAgent.indexOf("Opera") > -1;
       if (isOpera) {
         broswer = "Opera";
       } else if (userAgent.indexOf("Firefox") > -1) {
@@ -364,7 +368,7 @@ export default {
 }
 
 .more {
-  line-height: 25px;
+  line-height: 18px;
   margin-left: 65px;
   margin-top: 10px;
   font-size: 13px;
@@ -387,6 +391,7 @@ export default {
 }
 .main-reply {
   float: left;
+  width: 100%;
 }
 
 a {
@@ -410,18 +415,20 @@ a {
 .reply-list {
   float: right;
   width: 100%;
-  border-top: #96c2f1 dashed 1px;
+  /* border-top: #d3d3d3 solid 0.2px; */
 }
 
 ul {
   display: block;
 }
+li:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 li {
-  /* float: right; */
-  min-height: 108px;
-  margin-top: 10px;
   list-style: none;
-  display: block;
+  border-bottom: #d3d3d3 solid 0.2px;
 }
 
 p {

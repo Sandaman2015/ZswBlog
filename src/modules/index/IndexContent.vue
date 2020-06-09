@@ -174,12 +174,17 @@
       <!-- 关于我 -->
       <div class="content-middle about-me">
         <h3>About-me</h3>
-        <p class="typing title-h">保留一份骨子里高尚的人格,只为那份最真的性情而坚守。</p>
-        <a href="about.html">更多+</a>
+        <p class="typing title-h">
+          当你忘了自己的过去，满意自己的现在，漠视自己的未来，你就站在了生活的最高处。
+          <br />当成功不会让你太高兴，失败不会把你怎么样，平淡不会淹没你时，你就站在了生命的最高处。
+          <br />当你以微笑的心想到了过去，以希望的心向前看，以宽厚的心向下看，以坦然的心向上看时，
+          <br />你就站在了灵魂的最高处。
+        </p>
+        <a href="about.html">Read More+</a>
       </div>
       <!-- 热门文章 -->
       <div class="content-middle articles">
-        <h2 class="introduce">热门文章</h2>
+        <h2 class="introduce">最新文章</h2>
         <div class="articles-content">
           <article
             v-for="item in hotArticles"
@@ -320,7 +325,7 @@
                   <div class="footer-logo">
                     <h2>ZswBlog</h2>
                   </div>
-                  <p>一个奋斗在路上的程序员</p>
+                  <p>一名阳光,勇敢,治愈的程序员</p>
                   <div class="button">
                     <a href="about.html" class="btn">About Me</a>
                   </div>
@@ -332,22 +337,22 @@
                   <ul class="social-icon">
                     <li class="active">
                       <a href="whisper.html">
-                        <i class="fa fa-book"></i>文章
+                        <i class="fa fa-book"></i>所有文章
                       </a>
                     </li>
                     <li class="active">
                       <a href="leacots.html">
-                        <i class="fa fa-comments"></i>留言
+                        <i class="fa fa-comments"></i>本站留言
                       </a>
                     </li>
                     <li class="active">
                       <a href="tags.html">
-                        <i class="fa fa-tags"></i>标签
+                        <i class="fa fa-tags"></i>文章标签
                       </a>
                     </li>
                     <li class="active">
                       <a href="about.html">
-                        <i class="fa fa-snowflake-o"></i>关于
+                        <i class="fa fa-snowflake-o"></i>关于我
                       </a>
                     </li>
                     <li class="active">
@@ -363,7 +368,7 @@
                   <h2>联系我</h2>
                   <ul class="list">
                     <li>
-                      <i class="fa fa-map"></i>地址: 安徽省芜湖市鸠江区
+                      <i class="fa fa-map"></i>地址: 安徽省芜湖市
                     </li>
                     <li>
                       <i class="fa fa-qq"></i>QQ: 1761317983
@@ -382,7 +387,7 @@
             <div class="clear">
               <div class="center left w10">
                 <p>
-                  Copyright © 2019-2020 张晟玮 Powered by .NET Core on Linux
+                  Copyright © 2019-2020 张晟玮 Powered by .NET Core3.1 on Linux
                   <i
                     class="fa fa-linux"
                     aria-hidden="true"

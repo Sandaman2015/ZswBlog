@@ -105,7 +105,7 @@ export default {
       });
     },
     beforeSubmit() {
-      var userId = parseInt(document.getElementById("userId").innerText);
+      let userId = parseInt(document.getElementById("userId").innerText);
       if (userId !== 0) {
         this.submitLink("linkApplyForm");
       } else {

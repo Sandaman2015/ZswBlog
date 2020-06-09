@@ -66,7 +66,7 @@ export default {
     onSubmit(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
-          var sitetag = {
+          let sitetag = {
             SitetagTitle: this.formInline.tagTitle,
             UserId: this.userId
           };
@@ -92,7 +92,7 @@ export default {
       });
     },
     beforeSubmit() {
-      var userId = document.getElementById("userId").innerText;
+      let userId = document.getElementById("userId").innerText;
       if (userId !== "0" && userId !== 0) {
         this.userId = userId;
         this.onSubmit("tagApplyForm");

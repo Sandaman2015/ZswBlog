@@ -57,7 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
-      "API_PATH": JSON.stringify("https://www.zswblog.xyz")
+      "API_PATH": JSON.stringify("https://localhost:44376")
     }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),

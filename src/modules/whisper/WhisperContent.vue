@@ -51,7 +51,7 @@ export default {
     articleList() {
       this.$nextTick(() => {
         // 在dom渲染完后,再执行动画
-        var wow = new WOW({
+        let wow = new WOW({
           live: false
         });
         wow.init();

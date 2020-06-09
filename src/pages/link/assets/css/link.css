@@ -6,10 +6,12 @@
   margin: 10px 0 10px 0;
   color: black;
 }
+
 .link-content-middle .layui-elem-quote h1,
 span {
   color: black;
 }
+
 .link-content-middle .layui-elem-quote h1 {
   font-size: 16px;
   margin: 10px 0 10px 0;
@@ -94,8 +96,8 @@ figure {
 }
 
 .fh5co-project-item img {
-  height: 205px;
-  width: 200px;
+  height: 175px;
+  width: 195px;
   opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -113,7 +115,7 @@ figure {
 }
 
 .fh5co-project-item .fh5co-text h2 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   margin: 0 0 10px 0;
   color: #FF4500;
@@ -169,19 +171,23 @@ figure {
 .fh5co-project-item:focus span {
   text-decoration: none !important;
 }
+
 @media screen and (max-width: 475px) {
-  .link-list ul{
+  .link-list ul {
     width: 100%;
   }
-  .link-list ul li{
-    width: 90%!important;
-    max-width: 90%!important;
-    margin: 0px 20px;    
+
+  .link-list ul li {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin: 0px 20px;
   }
-  .fh5co-project-item img{
+
+  .fh5co-project-item img {
     margin: 0 auto;
   }
-  .fh5co-text{
-    height: 80px!important;
+
+  .fh5co-text {
+    height: 80px !important;
   }
 }

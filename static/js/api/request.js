@@ -40,9 +40,7 @@ axios.interceptors.response.use(
   }
 )
 export default function request(method, url, data) { // 暴露 request 给我们好API 管理
-  console.log(API_PATH);
-  console.log(process.env.NODE_ENV);
-  let BaseUrl = API_PATH + url; // 此处可以换成你的后端请求地址
+  let BaseUrl = API_PATH + url; // 此处地址转换为webpack全局变量地址+请求地址
   method = method.toLocaleLowerCase() // 封装RESTful API的各种请求方式 以 post get delete为例
   if (method === 'post') {
     return axios.post(BaseUrl, data) // axios的post 默认转化为json格式

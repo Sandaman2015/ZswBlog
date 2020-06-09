@@ -30,15 +30,16 @@
         <div class="link-list">
           <ul>
             <li
-              v-for="item in Linklist"
+              v-for="(item,index) in Linklist"
               class="list-item wow fadeInLeft wow bounceInRight"
-              style="max-width:200px;min-height:300px"
+              style="max-width:195px;min-height:290px"
+              :key="index"
             >
               <div class="col-md-4">
                 <a :href="item.linkSrc" target="_blank" class="fh5co-project-item image-popup">
                   <figure>
                     <div class="overlay">
-                      <i class="ti-location-arrow"></i>
+                      <i class="fa fa-location-arrow" aria-hidden="true"></i>
                     </div>
                     <img :src="item.linkImage" alt="Image" class="img-responsive" />
                   </figure>
@@ -73,7 +74,7 @@ export default {
     Linklist() {
       this.$nextTick(() => {
         // 在dom渲染完后,再执行动画
-        var wow = new WOW({
+        let wow = new WOW({
           live: false
         });
         wow.init();

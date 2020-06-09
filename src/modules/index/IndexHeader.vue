@@ -36,7 +36,7 @@
                 <a href="about.html?id=3">时间线</a>
               </dd>
               <dd>
-                <a href="about.html?id=4">旅行分享</a>
+                <a href="about.html?id=4">生活分享</a>
               </dd>
               <dd>
                 <a href="about.html?id=5">关于我</a>
@@ -68,7 +68,7 @@ export default {
     async login() {
       if (window.location.hash.length != 0) {
         // 获取access token
-        var accessToken = window.location.hash.substring(1).slice(13, -19);
+        let accessToken = window.location.hash.substring(1).slice(13, -19);
         await getQQUserInfo(accessToken).then(e => {
           this.userImage = e.data.figureurl_1;
           this.userId = e.userId;

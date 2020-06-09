@@ -143,7 +143,7 @@ export default {
     async mainSubmit(index, target) {
       const mainText = this.$refs.textArea[index].getContent();
       if (mainText !== "" && mainText !== "<p><br></p>") {
-        var userId = document.getElementById("userId").innerText;
+        let userId = document.getElementById("userId").innerText;
         if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
@@ -157,7 +157,7 @@ export default {
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
             // 主回复
-            var comment = {
+            let comment = {
               Location: ip,
               Browser: this.getBrowser(),
               UserId: userId,
@@ -208,9 +208,9 @@ export default {
     },
     // 获取浏览器
     getBrowser() {
-      var userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
-      var broswer = "";
-      var isOpera = userAgent.indexOf("Opera") > -1;
+      let userAgent = navigator.userAgent; // 取得浏览器的userAgent字符串
+      let broswer = "";
+      let isOpera = userAgent.indexOf("Opera") > -1;
       if (isOpera) {
         broswer = "Opera";
       } else if (userAgent.indexOf("Firefox") > -1) {
@@ -252,7 +252,7 @@ export default {
           break;
       }
       if (this.replyText !== "" && this.replyText !== "<p><br></p>") {
-        var userId = document.getElementById("userId").innerText;
+        let userId = document.getElementById("userId").innerText;
         if (parseInt(userId) !== 0) {
           if (getCookie("userEmail") !== null) {
             let ip = "";
@@ -267,7 +267,7 @@ export default {
               target.target.parentElement.parentElement.childNodes[4].innerText
             );
             // 主回复
-            var comment = {
+            let comment = {
               Location: ip,
               Browser: this.getBrowser(),
               UserId: userId,

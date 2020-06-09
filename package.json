@@ -13,11 +13,10 @@
   "dependencies": {
     "axios": "^0.19.2",
     "element-ui": "^2.13.0",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.0.3",
     "hls.js": "^0.13.2",
     "jquery": "^3.4.1",
     "nprogress": "^0.2.0",
-    "particles.js": "^2.0.0",
     "v-tag-cloud": "^1.0.3",
     "vue": "^2.5.2",
     "vue-aplayer": "^1.6.1",

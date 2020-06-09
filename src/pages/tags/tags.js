@@ -11,11 +11,13 @@ import VueClipboard from 'vue-clipboard2'
 import 'animate.css'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import VueJsonp from 'vue-jsonp'
+Vue.use(VueJsonp)
 Vue.use(VueClipboard)
 Vue.use(ElementUI)
 NProgress.configure({
-  easing: 'ease',  // 动画方式    
-  speed: 2500,  // 递增进度条的速度    
+  easing: 'ease', // 动画方式    
+  speed: 2500, // 递增进度条的速度    
   showSpinner: true, // 是否显示加载ico    
   trickleSpeed: 100, // 自动递增间隔     
   minimum: 0.1 // 初始化时的最小百分比
@@ -26,6 +28,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#tags',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

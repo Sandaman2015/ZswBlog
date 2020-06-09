@@ -170,7 +170,7 @@ export default {
   border-radius: 15px;
 }
 .toolbar {
-  width: 150px;
+  width: 120px;
   border-radius: 15px;
 }
 </style>

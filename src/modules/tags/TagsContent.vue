@@ -2,12 +2,12 @@
   <div class="content">
     <div class="cont">
       <div class="tagItem">
-        <article v-for="(item,index) in tagsList" class="wow slideInDown">
+        <article v-for="(item,index) in tagsList" :key="index" class="wow slideInDown">
           <h3 :class="item.tagClass">
             <i class="fa fa-tag" aria-hidden="true"></i>
             {{item.tagName}}
           </h3>
-          <section v-for="(article,index) in item.articleList">
+          <section v-for="(article,indexS) in item.articleList" :key="indexS">
             <span class="point-time point-yellow"></span>
             <time datetime="2013-03">
               <a :href="'details.html?ArticleDetails='+article.articleId">
@@ -26,52 +26,27 @@
       </div>
       <div class="ad">
         <div class="whitebg cloud">
+          <h2 class="htitle">天气</h2>
+          <weather height="300" />
+        </div>
+        <div class="whitebg cloud">
           <h2 class="htitle">标签云</h2>
           <ul>
             <a href="javascript:void(0)" class="wow bounceInDown" @click="pageLoad()">所有标签</a>
             <a
               href="javascript:void(0)"
-              v-for="(item,index) in tagsCloud"
+              v-for="(item,indexT) in tagsCloud"
+              :key="indexT"
               class="wow bounceInDown"
               @click="getTagId(item.tagId)"
             >{{item.tagName}}</a>
           </ul>
         </div>
-        <div style="font-weight:bold;padding:10px;text-align:center;margin-bottom:15px;">
-          <div style="margin-bottom:8px;">
-            <span style="line-height:1.8;font-size:15px;">专注实战 • 分享技巧 • 提升技术</span>
-            <br />
-            <span style="color:#666;">
-              扫描二维码关注『
-              <b style="color:red;">DotNetCore实战</b>』公众号
-            </span>
-          </div>
-          <div>
-            <img
-              style="width:100%;"
-              src="https://www.cnblogs.com/images/cnblogs_com/yilezhu/1359617/o_qrcode_for_gh_3d7593c84946_258.jpg"
-              alt="关注公众号：DotNetCore实战"
-            />
-          </div>
-
-          <div style="margin-bottom:8px;">
-            <span style="line-height:1.8;font-size:15px;">.NET Core微服务实战教程</span>
-            <br />
-            <span style="color:#666;">
-              微信扫描二维码『
-              <b style="color:red;">免费试看</b>』
-            </span>
-          </div>
-          <div>
-            <img
-              style="width:100%;"
-              src="https://images.cnblogs.com/cnblogs_com/yilezhu/1367833/o_200118034131%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20200113195132.jpg"
-              alt=".NET Core微服务实战教程"
-            />
-          </div>
+        <div class="whitebg cloud">
+          <h2 class="htitle">音乐</h2>
+          <music-location />
         </div>
       </div>
-      <div class="rightContent"></div>
     </div>
   </div>
 </template>
@@ -83,9 +58,14 @@ import {
   getTagsAndArticles,
   getArticlesByTagId
 } from "../../../static/js/api/tag.api";
+import weather from "../../components/weather";
+import MusicLocation from "../../components/VueAplayer";
 import { WOW } from "wowjs";
 export default {
-  name: "tags-site",
+  components: {
+    MusicLocation,
+    weather
+  },
   data() {
     return {
       index: 0,
@@ -94,33 +74,24 @@ export default {
     };
   },
   watch: {
-    tagsList() {
-      this.$nextTick(() => {
-        // 在dom渲染完后,再执行动画
-        var wow = new WOW({
-          live: false
-        });
-        wow.init();
-      });
-    },
     tagsCloud() {
       this.$nextTick(() => {
         // 在dom渲染完后,再执行动画
-        var wow = new WOW({
+        let wow = new WOW({
           live: false
         });
         wow.init();
       });
     }
   },
-  mounted() {
+  async mounted() {
     this.index = this.$route.query.index;
     if (this.index > 0) {
-      this.getTagId(this.index);
-      this.getTags();
+      await this.getTagId(this.index);
+      await this.getTags();
     } else {
-      this.getTags();
-      this.pageLoad();
+      await this.getTags();
+      await this.pageLoad();
     }
   },
   filters: {

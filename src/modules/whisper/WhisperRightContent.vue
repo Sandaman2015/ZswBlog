@@ -99,7 +99,7 @@ export default {
       this.$emit("ReturnAllArticle");
     },
     SerchArticle(event) {
-      var inputText =
+      let inputText =
         event.target.parentElement.parentElement.childNodes[0].value;
       this.$emit("SearchArticle", inputText);
     },

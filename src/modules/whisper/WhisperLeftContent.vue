@@ -178,12 +178,12 @@ export default {
     async loadMore() {
       this.load = true;
       this.pageIndex++;
-      var that = this;
+      let that = this;
       if (!this.isClassType) {
         await getArticlesByPage(this.pageSize, this.pageIndex).then(e => {
           if (e.length < 3) {
             that.loadMoreText = "到底了呦！刷新页面重新看吧！";
-            for (var i = 0; i < e.length; i++) {
+            for (let i = 0; i < e.length; i++) {
               this.articleList.push(e[i]);
             }
             that.disabledBtn = true;
@@ -191,7 +191,7 @@ export default {
               "已经没有文章了哦！去关于本站看看吧！哪里也有好玩的！"
             );
           } else if (e.length > 2) {
-            for (var i = 0; i < e.length; i++) {
+            for (let i = 0; i < e.length; i++) {
               this.articleList.push(e[i]);
             }
             that.loadMoreText = "加载更多";
@@ -212,7 +212,7 @@ export default {
         ).then(e => {
           if (e.length < 3) {
             that.loadMoreText = "到底了呦！刷新页面重新看吧！";
-            for (var i = 0; i < e.length; i++) {
+            for (let i = 0; i < e.length; i++) {
               this.articleList.push(e[i]);
             }
             that.disabledBtn = true;
@@ -220,7 +220,7 @@ export default {
               "已经没有这个类型的文章了哦！刷新页面重新浏览吧"
             );
           } else if (e.length > 2) {
-            for (var i = 0; i < e.length; i++) {
+            for (let i = 0; i < e.length; i++) {
               this.articleList.push(e[i]);
             }
             that.loadMoreText = "加载更多";
@@ -244,7 +244,7 @@ export default {
 <style scoped>
 .left-articlelist {
   float: left;
-  width: 900px;
+  width: 860px;
 }
 li {
   list-style: none;

@@ -27,15 +27,29 @@
       </ul>
     </nav>
     <div class="head-login">
-      <a
-        href="https://graph.qq.com/oauth2.0/authorize?client_id=101858486&response_type=token&scope=all&redirect_uri=http://www.zswblog.xyz/index.html"
-        id="qqLogin"
-      >
-        <p id="userId" hidden>{{userId}}</p>
-        <el-tooltip class="item" effect="light" :content="msg" placement="left" offset="15">
+      <el-popover placement="bottom-start" trigger="hover">
+        <div v-if="userId!==0">
+          <p>确定退出登录吗？</p>
+          <div style="text-align: right; margin: 0">
+            <el-button size="mini" type="text">取消</el-button>
+            <el-button type="primary" size="mini" @click="resetCookie">确定</el-button>
+          </div>
+        </div>
+        <div v-else>
+          <a
+            href="https://graph.qq.com/oauth2.0/authorize?client_id=101858486&response_type=token&scope=all&redirect_uri=http://www.zswblog.xyz/index.html"
+          >直接点击登录哦！</a>
+        </div>
+        <a
+          href="https://graph.qq.com/oauth2.0/authorize?client_id=101858486&response_type=token&scope=all&redirect_uri=http://www.zswblog.xyz/index.html"
+          id="qqLogin"
+          slot="reference"
+        >
+          <p id="userId" hidden>{{userId}}</p>
+
           <img :src="userImage" alt="头像" class="userImage" />
-        </el-tooltip>
-      </a>
+        </a>
+      </el-popover>
     </div>
     <div class="media-menu">
       <a href="index.html" class="logo show">ZswBlog</a>
@@ -99,7 +113,8 @@ export default {
       flag: false,
       value: false,
       showMenu: false,
-      menu: require("../../static/images/cc-menu.png")
+      menu: require("../../static/images/cc-menu.png"),
+      msg: "哈哈"
     };
   },
   created() {
@@ -115,10 +130,16 @@ export default {
         this.showMenu = false;
       }
     },
+    resetCookie() {
+      setCookie("userImage", "../../static/images/qq.png", -1);
+      setCookie("userId", 0, -1);
+      this.$message({ message: "退出成功", type: "success" });
+      location.reload();
+    },
     login() {
-      var image = getCookie("userImage");
-      var id = getCookie("userId");
-      if (image !== null && id !== null) {
+      let image = getCookie("userImage");
+      let id = getCookie("userId");
+      if (image !== null && id !== null && id !== 0) {
         this.userId = id;
         this.userImage = image.replace("%3A", ":");
       } else {
