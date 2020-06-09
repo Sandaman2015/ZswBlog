@@ -387,7 +387,7 @@
                     class="fa fa-linux"
                     aria-hidden="true"
                   ></i>&nbsp; 备案号:
-                  <a style="color:#bbb">皖ICP备19012774号</a>
+                  <a style="color:#bbb" href="http://www.miit.gov.cn/">皖ICP备19012774号</a>
                 </p>
               </div>
             </div>

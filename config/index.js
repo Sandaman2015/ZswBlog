@@ -1,25 +1,23 @@
-'use strict'
+// 'use strict'
 // Template version: 1.3.1
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-
 module.exports = {
   dev: {
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',//打包前需要改为./
+    assetsPublicPath: '/', //打包前需要改为./
     proxy: {
       '/api': {
-        target: 'https://localhost:44376',// 设置你调用的接口域名和端口号 
-        changeOrigin: true,     // 跨域
+        target: 'https://localhost:44376', // 设置你调用的接口域名和端口号 
+        changeOrigin: true, // 跨域
         pathRewrite: {
           '^/api': '/'
           // 这里理解成用‘/api’代替target里面的地址，后面组件中我们掉接口时直接用api代替 比如我要调用'http://10.1.5.11:8080/xxx/duty?time=2017-07-07 14:57:22'，直接写‘/api/xxx/duty?time=2017-07-07 14:57:22’即可
         }
       }
     },
-
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
@@ -50,10 +48,9 @@ module.exports = {
 
     cssSourceMap: true
   },
-
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../wwwroot/index.html'),//打包后的文件所在位置
+    // index: path.resolve(__dirname, '../wwwroot/index.html'), //打包后的文件所在位置
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../wwwroot'),
