@@ -26,10 +26,6 @@
       </div>
       <div class="ad">
         <div class="whitebg cloud">
-          <h2 class="htitle">天气</h2>
-          <weather height="300" />
-        </div>
-        <div class="whitebg cloud">
           <h2 class="htitle">标签云</h2>
           <ul>
             <a href="javascript:void(0)" class="wow bounceInDown" @click="pageLoad()">所有标签</a>
@@ -58,13 +54,11 @@ import {
   getTagsAndArticles,
   getArticlesByTagId
 } from "../../../static/js/api/tag.api";
-import weather from "../../components/weather";
 import MusicLocation from "../../components/VueAplayer";
 import { WOW } from "wowjs";
 export default {
   components: {
-    MusicLocation,
-    weather
+    MusicLocation
   },
   data() {
     return {

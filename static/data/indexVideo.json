@@ -1,5 +1,5 @@
 {
-  "videosrc": "https://singleblog.oss-cn-beijing.aliyuncs.com/video/Ocean.mp4",
-  "poster": "../../../static/images/bg_4.jpg",
+  "videosrc": "https://singleblog.oss-cn-beijing.aliyuncs.com/video/youname.mp4",
+  "poster": "https://singleblog.oss-cn-beijing.aliyuncs.com/images/index-bg.jpg",
   "volume": 0
 }

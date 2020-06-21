@@ -3,6 +3,20 @@
   padding: 0;
 }
 
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-display: swap;
+  font-size: 16px;
+  line-height: 1.5rem;
+  width: 100%;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 body,
 button,
 input,
@@ -93,9 +107,6 @@ hr {
 }
 
 p {
-  color: #69606b;
-  font-family: 'Source Sans Light', sans-serif;
-  text-rendering: optimizeLegibility;
   letter-spacing: -0.5px;
 }
 

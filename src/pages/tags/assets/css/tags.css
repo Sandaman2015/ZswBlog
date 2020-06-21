@@ -255,42 +255,50 @@ article section .brief {
 }
 
 .cloud ul a:first-child {
-  background: #036564;
+  background: #428BCA;
 }
 
-.cloud ul a:nth-child(9n-8) {
-  background: #3a3a38;
+.cloud ul a:nth-child(11n-10) {
+  background: #4A4A4A;
 }
 
-.cloud ul a:nth-child(9n-7) {
+.cloud ul a:nth-child(11n-9) {
+  background: #5CB85C;
+}
+
+.cloud ul a:nth-child(11n-8) {
+  background: #567E95;
+}
+
+.cloud ul a:nth-child(11n-7) {
   background: #beedc7;
 }
 
-.cloud ul a:nth-child(9n-6) {
+.cloud ul a:nth-child(11n-6) {
   background: #eb6841;
 }
 
-.cloud ul a:nth-child(9n-5) {
+.cloud ul a:nth-child(11n-5) {
   background: #3fb8af;
 }
 
-.cloud ul a:nth-child(9n-4) {
-  background: #19caad;
+.cloud ul a:nth-child(11n-4) {
+  background: #B433FF;
 }
 
-.cloud ul a:nth-child(9n-3) {
+.cloud ul a:nth-child(11n-3) {
   background: #fc9d9a;
 }
 
-.cloud ul a:nth-child(9n-2) {
+.cloud ul a:nth-child(11n-2) {
   background: #edc951;
 }
 
-.cloud ul a:nth-child(9n-1) {
+.cloud ul a:nth-child(11n-1) {
   background: #ed4014;
 }
 
-.cloud ul a:nth-child(8n) {
+.cloud ul a:nth-child(11n) {
   background: #2db7f5;
 }
 

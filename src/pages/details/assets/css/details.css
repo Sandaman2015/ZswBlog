@@ -9,7 +9,7 @@
   word-break: break-word;
   line-height: 2.25;
   padding: 0 0 15px 15px;
-
+  color: white;
 }
 
 .title:hover {
@@ -41,6 +41,7 @@
   font-size: 1em;
   vertical-align: middle;
   font-weight: normal;
+  color: white;
 }
 
 .info span:hover {
@@ -49,17 +50,17 @@
   transition: 0.5s;
 }
 
-.details-warp {
-  width: 880px;
-  border: #dcdfe6 solid 1px;
-  border-radius: 10px;
-  float: left;
-  background-color: #fff;
+.warp-content {
+  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/details-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
 }
 
-.details-warp:hover {
-  transition: 0.5s;
-  border: #fc9d9a solid 1px;
+.details-warp {
+  width: 880px;
+  float: left;
+  background-color: #fff;
 }
 
 .w-e-text {
@@ -70,12 +71,6 @@
   width: 870px;
   /* min-height: 1000px; */
   top: 25px;
-}
-
-.article-content pre,
-code {
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .container {
@@ -217,7 +212,6 @@ blockquote {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  color: #fff;
   -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
 }
@@ -231,42 +225,53 @@ blockquote {
   text-decoration: none;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .cloud ul a:first-child {
-  background: #036564;
+  background: #428BCA;
 }
 
-.cloud ul a:nth-child(8n-7) {
+.cloud ul a:nth-child(11n-10) {
+  background: #4A4A4A;
+}
+
+.cloud ul a:nth-child(11n-9) {
+  background: #5CB85C;
+}
+
+.cloud ul a:nth-child(11n-8) {
+  background: #567E95;
+}
+
+.cloud ul a:nth-child(11n-7) {
   background: #beedc7;
 }
 
-.cloud ul a:nth-child(8n-6) {
+.cloud ul a:nth-child(11n-6) {
   background: #eb6841;
 }
 
-.cloud ul a:nth-child(8n-5) {
+.cloud ul a:nth-child(11n-5) {
   background: #3fb8af;
 }
 
-.cloud ul a:nth-child(8n-4) {
-  background: #19caad;
+.cloud ul a:nth-child(11n-4) {
+  background: #B433FF;
 }
 
-.cloud ul a:nth-child(8n-3) {
+.cloud ul a:nth-child(11n-3) {
   background: #fc9d9a;
 }
 
-.cloud ul a:nth-child(8n-2) {
+.cloud ul a:nth-child(11n-2) {
   background: #edc951;
 }
 
-.cloud ul a:nth-child(8n-1) {
+.cloud ul a:nth-child(11n-1) {
   background: #ed4014;
 }
 
-.cloud ul a:nth-child(8n) {
+.cloud ul a:nth-child(11n) {
   background: #2db7f5;
 }
 
@@ -400,12 +405,6 @@ li {
   .article-content {
     width: 100% !important;
     margin: 3px 3px;
-  }
-
-  pre {
-    width: 100% !important;
-    word-wrap: break-word;
-    white-space: pre-wrap;
   }
 
   .article-content>p {

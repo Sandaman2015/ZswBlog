@@ -2,57 +2,51 @@
   <div class="content">
     <div class="warp">
       <div class="details-warp">
-        <!-- 标题区域 -->
-        <div class="warp-header">
-          <h1 class="title wow slideInLeft">{{articleDetails.articleTitle}}</h1>
-          <hr class="hr-blue" />
-        </div>
         <!-- 文章信息 -->
         <div class="warp-content wow slideInRight">
-          <blockquote style="border-left: 4px solid #409EFF;">
-            <div class="info">
-              <p>
-                <span>
-                  <i class="fa fa-eye" aria-hidden="true"></i>
-                  浏览次数:
-                  {{articleDetails.articleVisits}}次
-                </span>
-                &nbsp;
-                <span>
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  满意度:
-                  {{articleDetails.articleLikes}}
-                </span>
-                &nbsp;
-                <span>
-                  <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                  文章类型:
-                  {{articleDetails.articleClass}}
-                </span>
-              </p>
-            </div>
-            <div class="info">
-              <p>
-                <span>
-                  <i class="fa fa-calendar" aria-hidden="true"></i>
-                  发布日期:
-                  {{articleDetails.articleTime|filterSubDate}}日
-                </span>&nbsp;
-                &nbsp;
-                <span>
-                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                  字数:
-                  {{articleDetails.articleTextCount}}字
-                </span>
-                &nbsp;
-                <span>
-                  <i class="fa fa-clock-o" aria-hidden="true"></i>
-                  阅读时间:
-                  {{articleDetails.articleReadTime}}分钟
-                </span>
-              </p>
-            </div>
-          </blockquote>
+          <h1 class="title">{{articleDetails.articleTitle}}</h1>
+          <div class="info" v-highlight>
+            <p>
+              <span>
+                <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                文章类型:
+                {{articleDetails.articleClass}}
+              </span>
+              &nbsp;
+              <span>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                浏览次数:
+                {{articleDetails.articleVisits}}次
+              </span>
+              &nbsp;
+              <span>
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                满意度:
+                {{articleDetails.articleLikes}}
+              </span>
+            </p>
+          </div>
+          <div class="info">
+            <p>
+              <span>
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                发布日期:
+                {{articleDetails.articleTime|filterSubDate}}日
+              </span>&nbsp;
+              &nbsp;
+              <span>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                字数:
+                {{articleDetails.articleTextCount}}字
+              </span>
+              &nbsp;
+              <span>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                阅读时间:
+                {{articleDetails.articleReadTime}}分钟
+              </span>
+            </p>
+          </div>
         </div>
         <hr class="hr-blue" />
         <!-- 内容区域 -->
@@ -128,10 +122,6 @@
       <!-- 广告区域 -->
       <div class="ad">
         <div class="whitebg cloud">
-          <h2 class="htitle">天气</h2>
-          <weather />
-        </div>
-        <div class="whitebg cloud">
           <h2 class="htitle">标签云</h2>
           <ul>
             <a
@@ -156,7 +146,6 @@
 import Comments from "./Comment";
 import EditorBar from "../../components/WangEditor";
 import MusicLocation from "../../components/VueAplayer";
-import weather from "../../components/weather";
 import {
   getArticleById,
   addArticleLike
@@ -169,8 +158,7 @@ export default {
   components: {
     editor: EditorBar,
     comments: Comments,
-    MusicLocation,
-    weather
+    MusicLocation
   },
   data() {
     return {
@@ -371,5 +359,9 @@ export default {
 .load-more {
   text-align: center;
   margin: 10px 0;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 </style>
