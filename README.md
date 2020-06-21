@@ -8,8 +8,6 @@
 
 ![](https://singleblog.oss-cn-beijing.aliyuncs.com/preview/article-preview.png)
 
-![](https://singleblog.oss-cn-beijing.aliyuncs.com/preview/details-preview.png)
-
 2020-06-21 --------------------------------------------------------------------------------------1.7记录
 
 1.丰富了内容页面、标签，都删除天气组件
