@@ -14,17 +14,17 @@ import VueClipboard from 'vue-clipboard2'
 import Share from 'vue-social-share'
 import 'vue-social-share/dist/client.css';
 import hljs from 'highlight.js' // 导入代码高亮文件
-import 'highlight.js/styles/monokai-sublime.css'  // 导入代码高亮样式
+import 'highlight.js/styles/monokai-sublime.css' // 导入代码高亮样式
 import VueJsonp from 'vue-jsonp'
 
 Vue.use(VueJsonp)
-Vue.use(Share)// 分享组件
-Vue.use(VueClipboard)// 复制内容到剪贴板
+Vue.use(Share) // 分享组件
+Vue.use(VueClipboard) // 复制内容到剪贴板
 Vue.use(ElementUI)
 
 NProgress.configure({
-  easing: 'ease',  // 动画方式    
-  speed: 2500,  // 递增进度条的速度    
+  easing: 'ease', // 动画方式    
+  speed: 2500, // 递增进度条的速度    
   showSpinner: true, // 是否显示加载ico    
   trickleSpeed: 100, // 自动递增间隔    
   minimum: 0.1 // 初始化时的最小百分比
@@ -33,8 +33,8 @@ NProgress.done()
 Vue.config.productionTip = false
 
 Vue.directive('highlight', function (el) {
-  let highlight = el.querySelectorAll('pre code')
-  highlight.forEach((block) => {
+  let blocks = el.querySelectorAll('pre code');
+  blocks.forEach((block) => {
     hljs.highlightBlock(block)
   })
 })
@@ -43,6 +43,8 @@ Vue.directive('highlight', function (el) {
 new Vue({
   el: '#details',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

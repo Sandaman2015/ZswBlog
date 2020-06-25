@@ -1,54 +1,60 @@
 <template>
-  <div class="content">
+  <div id="content">
+    <div class="content-header" :style="headerStyle">
+      <!-- 文章信息 -->
+      <div class="warp-content wow slideInRight">
+        <h1 class="title">{{articleDetails.articleTitle}}</h1>
+        <div class="info" v-highlight>
+          <p>
+            <span>
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+              张晟玮
+            </span>
+            &nbsp;
+            <span>
+              <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+              文章类型:
+              {{articleDetails.articleClass}}
+            </span>
+            &nbsp;
+            <span>
+              <i class="fa fa-heart-o" aria-hidden="true"></i>
+              满意度:
+              {{articleDetails.articleLikes}}
+            </span>
+          </p>
+        </div>
+        <div class="info">
+          <p>
+            <span>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              发布日期:
+              {{articleDetails.articleTime|filterSubDate}}日
+            </span>&nbsp;
+            &nbsp;
+            <span>
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              字数:
+              {{articleDetails.articleTextCount}}字
+            </span>
+            &nbsp;
+            <span>
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              阅读时间:
+              {{articleDetails.articleReadTime}}分钟
+            </span>
+            &nbsp;
+            <span>
+              <i class="fa fa-eye" aria-hidden="true"></i>
+              浏览次数:
+              {{articleDetails.articleVisits}}次
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="warp">
       <div class="details-warp">
-        <!-- 文章信息 -->
-        <div class="warp-content wow slideInRight">
-          <h1 class="title">{{articleDetails.articleTitle}}</h1>
-          <div class="info" v-highlight>
-            <p>
-              <span>
-                <i class="fa fa-keyboard-o" aria-hidden="true"></i>
-                文章类型:
-                {{articleDetails.articleClass}}
-              </span>
-              &nbsp;
-              <span>
-                <i class="fa fa-eye" aria-hidden="true"></i>
-                浏览次数:
-                {{articleDetails.articleVisits}}次
-              </span>
-              &nbsp;
-              <span>
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                满意度:
-                {{articleDetails.articleLikes}}
-              </span>
-            </p>
-          </div>
-          <div class="info">
-            <p>
-              <span>
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-                发布日期:
-                {{articleDetails.articleTime|filterSubDate}}日
-              </span>&nbsp;
-              &nbsp;
-              <span>
-                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                字数:
-                {{articleDetails.articleTextCount}}字
-              </span>
-              &nbsp;
-              <span>
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                阅读时间:
-                {{articleDetails.articleReadTime}}分钟
-              </span>
-            </p>
-          </div>
-        </div>
-        <hr class="hr-blue" />
         <!-- 内容区域 -->
         <div
           class="article-content container"
@@ -59,12 +65,13 @@
         <div class="share-info">
           <blockquote class="elem-quote quote-nm share">
             <div class="op-list" style="margin-bottom: 10px;">
-              <a href="javascript:void(0)" class="like" @click="likeAdd(articleDetails.articleId)">
-                <p style="color: raga(255,255,255,0.2); font-size: 18px;">
-                  觉得不错,点个赞吧！
+              <a href="javascript:void(0)" @click="likeAdd(articleDetails.articleId)">
+                <p style="font-size: 18px;color:rgba(0,0,0,0.8)">
+                  觉得不错,点个赞吧！👉
                   <i
                     :class="likeClass"
                     aria-hidden="true"
+                    class="like"
                     style="font-size: 20px; line-height: 20px;"
                   ></i>
                 </p>
@@ -72,11 +79,11 @@
             </div>
             <div style="margin-bottom: 20px;">
               <h4>
-                本文标题：
+                <strong>本文标题：</strong>
                 <span>{{articleDetails.articleTitle}}</span>
               </h4>
               <h4>
-                本文网址：
+                <strong>本文网址：</strong>
                 <span>{{this.siteUrl}}</span>
               </h4>
             </div>
@@ -154,6 +161,7 @@ import { getAllTags } from "../../../static/js/api/tag.api";
 import { getAllComment, addComment } from "../../../static/js/api/comment.api";
 import { WOW } from "wowjs";
 import { getCookie } from "../../../static/js/cookie";
+import axios from "axios";
 export default {
   components: {
     editor: EditorBar,
@@ -175,7 +183,10 @@ export default {
       disabledBtn: false,
       total: 1,
       comment: "",
-      likeClass: "fa fa-heart"
+      likeClass: "fa fa-heart",
+      headerStyle: {
+        backgroundImage: ""
+      }
     };
   },
   watch: {
@@ -195,12 +206,20 @@ export default {
     }
   },
   mounted() {
+    this.init();
     this.index = this.$route.query.ArticleDetails;
     this.showArticleDetails(this.index);
     this.siteUrl =
       "https://www.zswblog.xyz/details.html?ArticleDetails=" + this.index;
   },
   methods: {
+    async init() {
+      let localPicUrl = "../../../static/data/detailsPic.json";
+      const getLocalPicList = url => axios.get(url);
+      let list = await getLocalPicList(localPicUrl);
+      let index = Math.floor(Math.random() * (0 - 4) + 4);
+      this.headerStyle.backgroundImage = "url(" + list[index].src + ")";
+    },
     async showArticleDetails(index) {
       await getArticleById(index).then(e => {
         this.articleDetails = e;
@@ -359,9 +378,5 @@ export default {
 .load-more {
   text-align: center;
   margin: 10px 0;
-}
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
 }
 </style>

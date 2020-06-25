@@ -1,6 +1,7 @@
 #content {
   background-color: white;
 }
+
 .warp {
   min-height: 980px;
   border: #dcdfe6 solid 1px;
@@ -13,15 +14,16 @@ a:active {
   color: #fff;
   text-decoration: none;
 }
+
 .box-active {
   top: 100px;
 }
+
 body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-
   background: #fff;
 }
 
@@ -69,32 +71,41 @@ body {
 .bg-01 {
   background: #539770;
 }
+
 .bg-02 {
   background: #4b7d74;
 }
+
 .bg-03 {
   background: #8dc2bc;
 }
+
 .bg-04 {
   background: #edd6b4;
 }
+
 .bg-05 {
   background: #be7467;
 }
+
 .bg-06 {
   background: #e2ae63;
 }
-.box-card{
+
+.box-card {
   top: 20%;
 }
+
 @media screen and (max-width: 475px) {
-  .box-card{
+  .box-card {
     z-index: 9999999;
   }
-  .card-wrapper:nth-child(1){
+
+  .card-wrapper:nth-child(1) {
     display: none;
   }
-  .card-wrapper:nth-child(4){
+
+  .card-wrapper:nth-child(4) {
     display: none;
   }
 }

@@ -428,7 +428,6 @@ li:after {
 }
 li {
   list-style: none;
-  border-bottom: #d3d3d3 solid 0.2px;
 }
 
 p {

@@ -19,10 +19,10 @@
           <a href="leacots.html">留言</a>
         </li>
         <li>
-          <a href="link.html">友情链接</a>
+          <a href="link.html">友链</a>
         </li>
         <li>
-          <a href="about.html">关于本站</a>
+          <a href="about.html">关于</a>
         </li>
       </ul>
     </nav>

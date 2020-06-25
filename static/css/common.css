@@ -56,11 +56,13 @@ textarea {
   height: 100%;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: touch;
-  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
 
 #content {
-  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
+  /* Safari */
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: touch;
+  width: 100%;
 }
 
 .content {
@@ -68,7 +70,6 @@ textarea {
   /* Safari */
   -webkit-overflow-scrolling: touch;
   scroll-behavior: touch;
-  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_content.png");
 }
 
 .warp {

@@ -32,27 +32,22 @@ export default {
 </script>
 
 <style socped>
-body {
-  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_about.jpg");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
 .white {
   background-color: rgba(255, 255, 255, 0) !important;
 }
-.white a {
+/* .white a {
   color: white !important;
-}
+} */
 
-.white p {
+/* .white p {
   color: white !important;
-}
+} */
 
-.white h1 {
+/* .white h1 {
   color: white !important;
 }
 
 .white h2 {
   color: white !important;
-}
+} */
 </style>

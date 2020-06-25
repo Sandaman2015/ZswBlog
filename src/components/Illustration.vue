@@ -2,7 +2,7 @@
   <div class="back-img">
     <div class="container">
       <h1>This is ZswBlog</h1>
-      <p>To be a professional coder!</p>
+      <p>坚持追求自我，努力成为完美</p>
     </div>
   </div>
 </template>
@@ -13,13 +13,16 @@ export default {};
 
 <style scoped>
 .back-img {
-  height: 370px;
+  height: 300px;
   width: 100%;
+  background-image: url("https://singleblog.oss-cn-beijing.aliyuncs.com/images/bg_about.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .container {
   display: block;
   width: 600px;
-  height: 400px;
+  height: 300px;
   margin: 0 auto;
   text-align: center;
   position: relative;
@@ -31,7 +34,7 @@ h1 {
   left: 50%;
   margin-left: -300px;
   top: 25%;
-  font-size: 68px;
+  font-size: 60px;
   color: white;
   font-family: "Hiragino Sans GB";
   font-weight: normal;
