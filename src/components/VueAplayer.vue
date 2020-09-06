@@ -20,6 +20,7 @@
 <script>
 import axios from "axios";
 import Aplayer from "vue-aplayer";
+import { getTop30MusicList,getAllMusicList } from "../../static/js/api/common.api";
 export default {
   components: {
     Aplayer
@@ -37,33 +38,12 @@ export default {
     async init() {
       this.flag = true;
       this.songList.length = 0;
-      //这边是引入了axios然后使用的get请求的一个音乐列表接口
-      const getMusicList = url => axios.get(url);
-      //这边url随大家更改了
-      const getMusicSrc = music => axios.get(music);
-      let music = "../../static/data/music.json";
-      let url = await getMusicList(music);
-      let data = await getMusicList(url.musicSrc);
-      let list = data.playlist.trackIds;
-      for (let i = 0; i < 50; i++) {
-        let musicData = await getMusicList(
-          `http://121.36.93.244:3000/song/detail?ids=${list[i].id}`
-        );
-        let musicUrl = await getMusicList(
-          `http://121.36.93.244:3000/song/url?id=${list[i].id}`
-        );
-        let musicLrc = await getMusicList(
-          `http://121.36.93.244:3000/lyric?id=${list[i].id}`
-        );
-        let music = {
-          title: musicData.songs[0].name,
-          artist: musicData.songs[0].ar[0].name,
-          src: musicUrl.data[0].url,
-          pic: musicData.songs[0].al.picUrl,
-          lrc: musicLrc.lrc.lyric
-        };
-        this.songList.push(music);
-      }
+      this.songList=await getTop30MusicList();      
+    },
+    async getAllMusic(){
+      this.flag = true;
+      this.songList.length = 0;
+      this.songList=await getAllMusicList(); 
     }
   }
 };

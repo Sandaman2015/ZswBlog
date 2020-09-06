@@ -10,7 +10,7 @@ module.exports = {
     assetsPublicPath: '/', //打包前需要改为./
     proxy: {
       '/api': {
-        target: 'https://localhost:44376', // 设置你调用的接口域名和端口号 
+        target: 'http://localhost:51860', // 设置你调用的接口域名和端口号 
         changeOrigin: true, // 跨域
         pathRewrite: {
           '^/api': '/'

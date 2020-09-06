@@ -65,6 +65,9 @@ export default {
   },
   data() {
     return {};
+  },
+  mounted(){
+    this.$refs.MusicLocation.getAllMusic();
   }
 };
 </script>

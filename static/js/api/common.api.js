@@ -1,6 +1,9 @@
-import { requestCors } from './request'
+import  request  from './request'
 
-export const getIp = (params) => {
-  return requestCors('get', `https://apis.map.qq.com/ws/location/v1/ip?key=HIQBZ-WNQKK-6VZJ7-AR3XK-HEVAK-5DBXD`, params)
+export const getTop30MusicList = (params) => {
+  return request('get', `/common/getmusiclist`, params)
 }
 
+export const getAllMusicList = (params) => {
+  return request('get', `/common/GetAllMusicList`, params)
+}

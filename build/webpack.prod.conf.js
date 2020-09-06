@@ -43,7 +43,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       parallel: true
     }),
     new webpack.DefinePlugin({
-      "API_PATH": JSON.stringify("https://www.zswblog.xyz")
+      "API_PATH": JSON.stringify("https://localhost:32778")
     }),
     // extract css into its own file
     new ExtractTextPlugin({
